@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1D4BF9BD0075E4B658B325C /* Pods_SWABLE_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */; };
+		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
+		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
+		D4320F19200E9CFF00BF69C2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4320F17200E9CFF00BF69C2 /* MainMenu.xib */; };
+		D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274F9200E9BBB000035B0 /* AppDelegate.swift */; };
+		D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274FB200E9BBB000035B0 /* ViewController.swift */; };
+		D4527501200E9BBB000035B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4527500200E9BBB000035B0 /* Assets.xcassets */; };
+		D4527504200E9BBB000035B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
+		D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4320F15200E9CFF00BF69C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4320F18200E9CFF00BF69C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D4320F1A200E9CFF00BF69C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4320F1B200E9CFF00BF69C2 /* SWABLE_Server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWABLE_Server.entitlements; sourceTree = "<group>"; };
+		D45274F6200E9BBB000035B0 /* SWABLE-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45274F9200E9BBB000035B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D45274FB200E9BBB000035B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4527500200E9BBB000035B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4527503200E9BBB000035B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4527505200E9BBB000035B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4320F0E200E9CFF00BF69C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45274F3200E9BBB000035B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D4BF9BD0075E4B658B325C /* Pods_SWABLE_Client.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18441DE80A4E29A3CE9D9A0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */,
+				4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E059A3E37E4A97128270E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4320F12200E9CFF00BF69C2 /* SWABLE-Server */ = {
+			isa = PBXGroup;
+			children = (
+				D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */,
+				D4320F15200E9CFF00BF69C2 /* Assets.xcassets */,
+				D4320F17200E9CFF00BF69C2 /* MainMenu.xib */,
+				D4320F1A200E9CFF00BF69C2 /* Info.plist */,
+				D4320F1B200E9CFF00BF69C2 /* SWABLE_Server.entitlements */,
+			);
+			path = "SWABLE-Server";
+			sourceTree = "<group>";
+		};
+		D45274ED200E9BBB000035B0 = {
+			isa = PBXGroup;
+			children = (
+				D45274F8200E9BBB000035B0 /* SWABLE-Client */,
+				D4320F12200E9CFF00BF69C2 /* SWABLE-Server */,
+				D45274F7200E9BBB000035B0 /* Products */,
+				18441DE80A4E29A3CE9D9A0D /* Pods */,
+				8E059A3E37E4A97128270E50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D45274F7200E9BBB000035B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D45274F6200E9BBB000035B0 /* SWABLE-Client.app */,
+				D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D45274F8200E9BBB000035B0 /* SWABLE-Client */ = {
+			isa = PBXGroup;
+			children = (
+				D45274F9200E9BBB000035B0 /* AppDelegate.swift */,
+				D45274FB200E9BBB000035B0 /* ViewController.swift */,
+				D4527500200E9BBB000035B0 /* Assets.xcassets */,
+				D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */,
+				D4527505200E9BBB000035B0 /* Info.plist */,
+			);
+			path = "SWABLE-Client";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4320F10200E9CFF00BF69C2 /* SWABLE-Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4320F1C200E9CFF00BF69C2 /* Build configuration list for PBXNativeTarget "SWABLE-Server" */;
+			buildPhases = (
+				D4320F0D200E9CFF00BF69C2 /* Sources */,
+				D4320F0E200E9CFF00BF69C2 /* Frameworks */,
+				D4320F0F200E9CFF00BF69C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SWABLE-Server";
+			productName = "SWABLE-Server";
+			productReference = D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D45274F5200E9BBB000035B0 /* SWABLE-Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4527508200E9BBB000035B0 /* Build configuration list for PBXNativeTarget "SWABLE-Client" */;
+			buildPhases = (
+				B1C0A350BDC07A635F735B8B /* [CP] Check Pods Manifest.lock */,
+				D45274F2200E9BBB000035B0 /* Sources */,
+				D45274F3200E9BBB000035B0 /* Frameworks */,
+				D45274F4200E9BBB000035B0 /* Resources */,
+				4CC438C381FDC85DAD92F324 /* [CP] Embed Pods Frameworks */,
+				66CF08F7D428C8E3B22BD040 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SWABLE-Client";
+			productName = SWABLE;
+			productReference = D45274F6200E9BBB000035B0 /* SWABLE-Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D45274EE200E9BBB000035B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Raizlabs;
+				TargetAttributes = {
+					D4320F10200E9CFF00BF69C2 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					D45274F5200E9BBB000035B0 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D45274F1200E9BBB000035B0 /* Build configuration list for PBXProject "SWABLE" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D45274ED200E9BBB000035B0;
+			productRefGroup = D45274F7200E9BBB000035B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D45274F5200E9BBB000035B0 /* SWABLE-Client */,
+				D4320F10200E9CFF00BF69C2 /* SWABLE-Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4320F0F200E9CFF00BF69C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */,
+				D4320F19200E9CFF00BF69C2 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45274F4200E9BBB000035B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4527504200E9BBB000035B0 /* LaunchScreen.storyboard in Resources */,
+				D4527501200E9BBB000035B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CC438C381FDC85DAD92F324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66CF08F7D428C8E3B22BD040 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C0A350BDC07A635F735B8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWABLE-Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4320F0D200E9CFF00BF69C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D45274F2200E9BBB000035B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */,
+				D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4320F17200E9CFF00BF69C2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4320F18200E9CFF00BF69C2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4527503200E9BBB000035B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4320F1D200E9CFF00BF69C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SWABLE-Server/SWABLE_Server.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		D4320F1E200E9CFF00BF69C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SWABLE-Server/SWABLE_Server.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		D4527506200E9BBB000035B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4527507200E9BBB000035B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4527509200E9BBB000035B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D452750A200E9BBB000035B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4320F1C200E9CFF00BF69C2 /* Build configuration list for PBXNativeTarget "SWABLE-Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4320F1D200E9CFF00BF69C2 /* Debug */,
+				D4320F1E200E9CFF00BF69C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D45274F1200E9BBB000035B0 /* Build configuration list for PBXProject "SWABLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4527506200E9BBB000035B0 /* Debug */,
+				D4527507200E9BBB000035B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4527508200E9BBB000035B0 /* Build configuration list for PBXNativeTarget "SWABLE-Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4527509200E9BBB000035B0 /* Debug */,
+				D452750A200E9BBB000035B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D45274EE200E9BBB000035B0 /* Project object */;
+}

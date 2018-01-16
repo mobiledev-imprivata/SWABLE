@@ -1,0 +1,8 @@
+platform :ios, '11.0'
+use_frameworks!
+
+target 'SWABLE-Client' do
+
+  pod 'Anchorage', '~> 4.0'
+
+end
