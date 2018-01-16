@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F1E56B200EA17D0031FC0B /* AppDelegate.swift */; };
+		09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F1E56D200EA17D0031FC0B /* ViewController.swift */; };
+		09F1E571200EA17D0031FC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E56F200EA17D0031FC0B /* Main.storyboard */; };
+		09F1E573200EA17D0031FC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E572200EA17D0031FC0B /* Assets.xcassets */; };
+		09F1E576200EA17D0031FC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */; };
 		A1D4BF9BD0075E4B658B325C /* Pods_SWABLE_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */; };
 		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
 		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
@@ -19,6 +24,13 @@
 
 /* Begin PBXFileReference section */
 		0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F1E569200EA17D0031FC0B /* Parasite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parasite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F1E56B200EA17D0031FC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09F1E56D200EA17D0031FC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09F1E570200EA17D0031FC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09F1E572200EA17D0031FC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09F1E575200EA17D0031FC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09F1E577200EA17D0031FC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
 		D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		09F1E566200EA17D0031FC0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4320F0E200E9CFF00BF69C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F1E56A200EA17D0031FC0B /* Parasite */ = {
+			isa = PBXGroup;
+			children = (
+				09F1E56B200EA17D0031FC0B /* AppDelegate.swift */,
+				09F1E56D200EA17D0031FC0B /* ViewController.swift */,
+				09F1E56F200EA17D0031FC0B /* Main.storyboard */,
+				09F1E572200EA17D0031FC0B /* Assets.xcassets */,
+				09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */,
+				09F1E577200EA17D0031FC0B /* Info.plist */,
+			);
+			path = Parasite;
+			sourceTree = "<group>";
+		};
 		18441DE80A4E29A3CE9D9A0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +120,7 @@
 			children = (
 				D45274F8200E9BBB000035B0 /* SWABLE-Client */,
 				D4320F12200E9CFF00BF69C2 /* SWABLE-Server */,
+				09F1E56A200EA17D0031FC0B /* Parasite */,
 				D45274F7200E9BBB000035B0 /* Products */,
 				18441DE80A4E29A3CE9D9A0D /* Pods */,
 				8E059A3E37E4A97128270E50 /* Frameworks */,
@@ -99,6 +132,7 @@
 			children = (
 				D45274F6200E9BBB000035B0 /* SWABLE-Client.app */,
 				D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */,
+				09F1E569200EA17D0031FC0B /* Parasite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +152,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		09F1E568200EA17D0031FC0B /* Parasite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F1E57A200EA17D0031FC0B /* Build configuration list for PBXNativeTarget "Parasite" */;
+			buildPhases = (
+				09F1E565200EA17D0031FC0B /* Sources */,
+				09F1E566200EA17D0031FC0B /* Frameworks */,
+				09F1E567200EA17D0031FC0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Parasite;
+			productName = Parasite;
+			productReference = 09F1E569200EA17D0031FC0B /* Parasite.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D4320F10200E9CFF00BF69C2 /* SWABLE-Server */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4320F1C200E9CFF00BF69C2 /* Build configuration list for PBXNativeTarget "SWABLE-Server" */;
@@ -161,10 +212,14 @@
 		D45274EE200E9BBB000035B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Raizlabs;
 				TargetAttributes = {
+					09F1E568200EA17D0031FC0B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					D4320F10200E9CFF00BF69C2 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -190,11 +245,22 @@
 			targets = (
 				D45274F5200E9BBB000035B0 /* SWABLE-Client */,
 				D4320F10200E9CFF00BF69C2 /* SWABLE-Server */,
+				09F1E568200EA17D0031FC0B /* Parasite */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		09F1E567200EA17D0031FC0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F1E576200EA17D0031FC0B /* LaunchScreen.storyboard in Resources */,
+				09F1E573200EA17D0031FC0B /* Assets.xcassets in Resources */,
+				09F1E571200EA17D0031FC0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4320F0F200E9CFF00BF69C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +336,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		09F1E565200EA17D0031FC0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */,
+				09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4320F0D200E9CFF00BF69C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +365,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		09F1E56F200EA17D0031FC0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09F1E570200EA17D0031FC0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09F1E575200EA17D0031FC0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		D4320F17200E9CFF00BF69C2 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,6 +400,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		09F1E578200EA17D0031FC0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = Parasite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Parasite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09F1E579200EA17D0031FC0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336S848KQ4;
+				INFOPLIST_FILE = Parasite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Parasite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D4320F1D200E9CFF00BF69C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,6 +614,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		09F1E57A200EA17D0031FC0B /* Build configuration list for PBXNativeTarget "Parasite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F1E578200EA17D0031FC0B /* Debug */,
+				09F1E579200EA17D0031FC0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D4320F1C200E9CFF00BF69C2 /* Build configuration list for PBXNativeTarget "SWABLE-Server" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
