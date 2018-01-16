@@ -11,7 +11,11 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    var updateTimer: Timer!
+    private weak var updateTimer: Timer? {
+        didSet {
+            oldValue?.invalidate()
+        }
+    }
 
     @IBOutlet weak var launchStressTestButton: UIButton!
     @IBOutlet weak var stressTestIndicatorLabel: UILabel!
@@ -27,20 +31,18 @@ class ViewController: UIViewController {
         launchStressTestButton.layer.borderColor = UIColor.white.cgColor
         launchStressTestButton.layer.borderWidth = 2.0
         
-        updateTimer = Timer.scheduledTimer(withTimeInterval: 0.16, repeats: true, block: { (timer) in
-            self.thermalsLabel.text = self.getThermalStateString()
-            self.memoryUsageLabel.text = self.memoryUsageBytes().map { "\($0 / 1024 / 1024) MB" } ?? "Unknown"
+        updateTimer = Timer.scheduledTimer(withTimeInterval: 0.16, repeats: true, block: { [weak self] (timer) in
+            guard let sself = self else {
+                return
+            }
+            sself.thermalsLabel.text = sself.getThermalStateString()
+            sself.memoryUsageLabel.text = sself.memoryUsageBytes().map { "\($0 / 1024 / 1024) MB" } ?? "Unknown"
         })
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
-    @IBAction func DispatchStressThreads() {
+    @IBAction func dispatchStressThreads() {
         
         stressTestIndicatorLabel.isHidden = false
         
@@ -48,13 +50,13 @@ class ViewController: UIViewController {
         print("Launching stress threads for \(numCores) cores.")
         for _ in 0 ..< numCores {
             DispatchQueue.global().async {
-                self.StressThread()
+                self.stressThread()
             }
         }
     }
     
     /// Gives a CPU core a lot to do. Here we do some grammar substitutions.
-    func StressThread() {
+    func stressThread() {
         // Generate the l-system grammar for a Koch snowflake.
         var tokenString = "F"
         while true {
@@ -88,8 +90,6 @@ extension ViewController {
             return "Nominal"
         case .fair:
             return "Fair"
-        default:
-            return "Unknown"
         }
     }
     
@@ -112,12 +112,9 @@ extension ViewController {
         
         if kerr == KERN_SUCCESS {
             return info.resident_size
-            //print("Memory in use (in bytes): \(info.resident_size)")
         }
         else {
             return nil
-//            print("Error with task_info(): " +
-//                (String(cString: mach_error_string(kerr), encoding: String.Encoding.ascii) ?? "unknown error"))
         }
     }
 }
