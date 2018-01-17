@@ -16,6 +16,7 @@
 		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
 		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
 		D4320F19200E9CFF00BF69C2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4320F17200E9CFF00BF69C2 /* MainMenu.xib */; };
+		D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */; };
 		D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
 		D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
 		D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
@@ -42,6 +43,7 @@
 		D4320F18200E9CFF00BF69C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D4320F1A200E9CFF00BF69C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4320F1B200E9CFF00BF69C2 /* SWABLE_Server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWABLE_Server.entitlements; sourceTree = "<group>"; };
+		D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconMonitor.swift; sourceTree = "<group>"; };
 		D4320F21200FA0EC00BF69C2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D45274F6200E9BBB000035B0 /* SWABLE-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45274F9200E9BBB000035B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				D4527500200E9BBB000035B0 /* Assets.xcassets */,
 				D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */,
 				D4527505200E9BBB000035B0 /* Info.plist */,
+				D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */,
 			);
 			path = "SWABLE-Client";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */,
+				D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */,
 				D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */,
 				D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */,
 			);
