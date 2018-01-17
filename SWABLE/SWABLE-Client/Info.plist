@@ -27,6 +27,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>SWA requires a BLE peripheral.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>SWA requires region monitoring.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

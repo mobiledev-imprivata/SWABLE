@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SWABLE
+//  SWABLE-Client
 //
 //  Created by Rob Visentin on 1/16/18.
 //  Copyright © 2018 Raizlabs. All rights reserved.
@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private let beaconMonitor = BeaconMonitor()
+    private let peripheral = Peripheral()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -38,6 +39,7 @@ extension AppDelegate: BeaconMonitorDelegate {
 
     func beaconMonitorDidStart(_ beaconMonitor: BeaconMonitor) {
         Message.post()
+        peripheral.startAdvertising()
     }
 
     func beaconMonitorDidStop(_ beaconMonitor: BeaconMonitor) {
@@ -46,3 +48,14 @@ extension AppDelegate: BeaconMonitorDelegate {
 
 }
 
+extension AppDelegate: PeripheralDelegate {
+
+    func peripheralDidStartAdvertsising(_ peripheral: Peripheral) {
+        Message.post()
+    }
+
+    func peripheralDidStopAdvertising(_ peripheral: Peripheral) {
+        Message.post()
+    }
+
+}

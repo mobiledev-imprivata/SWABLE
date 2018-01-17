@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  SWABLE
+//  SWABLE-Client
 //
 //  Created by Rob Visentin on 1/16/18.
 //  Copyright © 2018 Raizlabs. All rights reserved.
@@ -23,18 +23,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        textView.isEditable = false
+
         NotificationCenter.default.addObserver(self, selector: #selector(display), name: Message.notificationName, object: nil)
     }
 
     @objc private func display(notification: Notification) {
-        guard let message = notification.userInfo?[Message.notificationMessageKey] as? String else {
+        guard let message = notification.userInfo?[Message.attributedTextKey] as? NSAttributedString else {
             return
         }
 
         DispatchQueue.main.async {
-            self.textView.text.append("\n \(message)")
-            self.textView.scrollRangeToVisible(NSRange(location: self.textView.text.count, length: 0))
+            self.append(attributedText: message)
         }
+    }
+
+    private func append(attributedText: NSAttributedString) {
+        let text = textView.attributedText.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString()
+        text.append(NSMutableAttributedString(string: "\n"))
+        text.append(attributedText)
+
+        textView.attributedText = text
+        textView.scrollRangeToVisible(NSRange(location: attributedText.length, length: 0))
     }
 
 }
