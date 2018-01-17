@@ -16,6 +16,9 @@
 		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
 		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
 		D4320F19200E9CFF00BF69C2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4320F17200E9CFF00BF69C2 /* MainMenu.xib */; };
+		D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
+		D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
+		D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
 		D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274F9200E9BBB000035B0 /* AppDelegate.swift */; };
 		D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274FB200E9BBB000035B0 /* ViewController.swift */; };
 		D4527501200E9BBB000035B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4527500200E9BBB000035B0 /* Assets.xcassets */; };
@@ -39,6 +42,7 @@
 		D4320F18200E9CFF00BF69C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D4320F1A200E9CFF00BF69C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4320F1B200E9CFF00BF69C2 /* SWABLE_Server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWABLE_Server.entitlements; sourceTree = "<group>"; };
+		D4320F21200FA0EC00BF69C2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D45274F6200E9BBB000035B0 /* SWABLE-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45274F9200E9BBB000035B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45274FB200E9BBB000035B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,12 +119,21 @@
 			path = "SWABLE-Server";
 			sourceTree = "<group>";
 		};
+		D4320F23200FA1CE00BF69C2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D4320F21200FA0EC00BF69C2 /* Message.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		D45274ED200E9BBB000035B0 = {
 			isa = PBXGroup;
 			children = (
 				D45274F8200E9BBB000035B0 /* SWABLE-Client */,
 				D4320F12200E9CFF00BF69C2 /* SWABLE-Server */,
 				09F1E56A200EA17D0031FC0B /* Parasite */,
+				D4320F23200FA1CE00BF69C2 /* Shared */,
 				D45274F7200E9BBB000035B0 /* Products */,
 				18441DE80A4E29A3CE9D9A0D /* Pods */,
 				8E059A3E37E4A97128270E50 /* Frameworks */,
@@ -340,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */,
 				09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */,
 				09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */,
 			);
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */,
+				D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +374,7 @@
 			files = (
 				D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */,
 				D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */,
+				D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +460,7 @@
 				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -463,7 +479,7 @@
 				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -587,7 +603,7 @@
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,7 +620,7 @@
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
