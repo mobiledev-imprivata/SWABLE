@@ -28,5 +28,7 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>SWA requires a BLE peripheral.</string>
 </dict>
 </plist>

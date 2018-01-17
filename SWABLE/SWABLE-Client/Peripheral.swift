@@ -19,12 +19,12 @@ final class Peripheral: NSObject {
 
     private let service: CBMutableService = {
         let service = CBMutableService(
-            type: CBUUID(string: "3025E7A9-CC24-4B7C-B806-0F674D07E46C"),
+            type: CBUUID(string: Constants.Peripheral.service),
             primary: true
         )
         service.characteristics = [
             CBMutableCharacteristic(
-                type: CBUUID(string: "9476292B-5E5A-4CD4-BD3E-9B1E7B4DB12E"),
+                type: CBUUID(string: Constants.Peripheral.characteristic),
                 properties: .read,
                 value: nil,
                 permissions: .readable
@@ -89,7 +89,7 @@ extension Peripheral: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {
         Message.post(request)
 
-        request.value = "👋".data(using: .utf8)
+        request.value = Constants.Peripheral.characteristicData
         peripheral.respond(to: request, withResult: .success)
     }
 

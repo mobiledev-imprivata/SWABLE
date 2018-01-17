@@ -13,15 +13,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    private let beacon = Beacon()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        beacon.startAdvertising()
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
 
 }
 
+extension AppDelegate: BeaconDelegate {
+
+    func beaconDidStartAdvertising(_ beacon: Beacon) {
+        Message.post()
+    }
+
+    func beaconDidStopAdvertising(_ beacon: Beacon) {
+        Message.post()
+    }
+
+}
