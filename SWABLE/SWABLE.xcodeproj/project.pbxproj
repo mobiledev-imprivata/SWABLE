@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09622FFE20113FD70049392D /* SystemInfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09622FFC20113FD70049392D /* SystemInfoTextView.swift */; };
+		09623009201140B50049392D /* RZIOKit.c in Sources */ = {isa = PBXBuildFile; fileRef = 09623001201140B50049392D /* RZIOKit.c */; };
+		0962300A201140B50049392D /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09623004201140B50049392D /* Process.swift */; };
+		0962300B201140B50049392D /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09623006201140B50049392D /* System.swift */; };
+		0962300C201140B50049392D /* Battery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09623007201140B50049392D /* Battery.swift */; };
+		0962300D201140B50049392D /* IOReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09623008201140B50049392D /* IOReturn.swift */; };
+		09623013201140D30049392D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0962300F201140D30049392D /* LaunchScreen.storyboard */; };
+		09623014201140D30049392D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09623011201140D30049392D /* Main.storyboard */; };
 		09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F1E56B200EA17D0031FC0B /* AppDelegate.swift */; };
 		09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F1E56D200EA17D0031FC0B /* ViewController.swift */; };
-		09F1E571200EA17D0031FC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E56F200EA17D0031FC0B /* Main.storyboard */; };
 		09F1E573200EA17D0031FC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E572200EA17D0031FC0B /* Assets.xcassets */; };
-		09F1E576200EA17D0031FC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */; };
 		504659C161B2E9D80425A46C /* Pods_SWABLE_Server.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */; };
+		6D84FC69C485A6363323904B /* Pods_Parasite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545C6EA24225E19EAFEBD70A /* Pods_Parasite.framework */; };
 		A1D4BF9BD0075E4B658B325C /* Pods_SWABLE_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */; };
 		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
 		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
@@ -20,16 +27,13 @@
 		D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */; };
 		D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
 		D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
-		D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
 		D4320F2B200FC37A00BF69C2 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2A200FC37A00BF69C2 /* Peripheral.swift */; };
 		D4320F2D200FCE4600BF69C2 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2C200FCE4600BF69C2 /* Beacon.swift */; };
 		D4320F2F200FCF2C00BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
 		D4320F30200FCFD900BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
-		D4320F31200FCFDA00BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
 		D4320F33200FF18A00BF69C2 /* PeripheralScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F32200FF18A00BF69C2 /* PeripheralScanner.swift */; };
 		D4320F35200FF68E00BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
 		D4320F362010E1C600BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
-		D4320F372010E1C600BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
 		D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274F9200E9BBB000035B0 /* AppDelegate.swift */; };
 		D4527501200E9BBB000035B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4527500200E9BBB000035B0 /* Assets.xcassets */; };
 		D4527504200E9BBB000035B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */; };
@@ -37,16 +41,27 @@
 
 /* Begin PBXFileReference section */
 		0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09622FFC20113FD70049392D /* SystemInfoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfoTextView.swift; sourceTree = "<group>"; };
+		09622FFD20113FD70049392D /* Parasite-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Parasite-Bridging-Header.h"; sourceTree = "<group>"; };
+		09623001201140B50049392D /* RZIOKit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RZIOKit.c; sourceTree = "<group>"; };
+		09623002201140B50049392D /* RZIOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZIOKit.h; sourceTree = "<group>"; };
+		09623004201140B50049392D /* Process.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
+		09623005201140B50049392D /* SystemKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemKit.h; sourceTree = "<group>"; };
+		09623006201140B50049392D /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		09623007201140B50049392D /* Battery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battery.swift; sourceTree = "<group>"; };
+		09623008201140B50049392D /* IOReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOReturn.swift; sourceTree = "<group>"; };
+		09623010201140D30049392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09623012201140D30049392D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09F1E569200EA17D0031FC0B /* Parasite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parasite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F1E56B200EA17D0031FC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F1E56D200EA17D0031FC0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09F1E570200EA17D0031FC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09F1E572200EA17D0031FC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		09F1E575200EA17D0031FC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F1E577200EA17D0031FC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1085FE242141C0A91966ACB1 /* Pods-Parasite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parasite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parasite/Pods-Parasite.debug.xcconfig"; sourceTree = "<group>"; };
 		120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Server.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
+		545C6EA24225E19EAFEBD70A /* Pods_Parasite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Parasite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900BB15F678E32778D19C3B3 /* Pods-SWABLE-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Server.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.release.xcconfig"; sourceTree = "<group>"; };
 		C09575DB18C5CB77F9B60BC3 /* Pods-SWABLE-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.debug.xcconfig"; sourceTree = "<group>"; };
 		D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +82,7 @@
 		D4527500200E9BBB000035B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4527503200E9BBB000035B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4527505200E9BBB000035B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F452D7BB7BBCC02C65E8BFC9 /* Pods-Parasite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parasite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parasite/Pods-Parasite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D84FC69C485A6363323904B /* Pods_Parasite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,14 +113,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09622FFF201140B50049392D /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				09623000201140B50049392D /* RZIOKit */,
+				09623003201140B50049392D /* SystemKit */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		09623000201140B50049392D /* RZIOKit */ = {
+			isa = PBXGroup;
+			children = (
+				09623001201140B50049392D /* RZIOKit.c */,
+				09623002201140B50049392D /* RZIOKit.h */,
+			);
+			path = RZIOKit;
+			sourceTree = "<group>";
+		};
+		09623003201140B50049392D /* SystemKit */ = {
+			isa = PBXGroup;
+			children = (
+				09623004201140B50049392D /* Process.swift */,
+				09623005201140B50049392D /* SystemKit.h */,
+				09623006201140B50049392D /* System.swift */,
+				09623007201140B50049392D /* Battery.swift */,
+				09623008201140B50049392D /* IOReturn.swift */,
+			);
+			path = SystemKit;
+			sourceTree = "<group>";
+		};
+		0962300E201140D30049392D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0962300F201140D30049392D /* LaunchScreen.storyboard */,
+				09623011201140D30049392D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		09F1E56A200EA17D0031FC0B /* Parasite */ = {
 			isa = PBXGroup;
 			children = (
+				0962300E201140D30049392D /* Storyboards */,
+				09622FFF201140B50049392D /* Dependencies */,
+				09622FFD20113FD70049392D /* Parasite-Bridging-Header.h */,
+				09622FFC20113FD70049392D /* SystemInfoTextView.swift */,
 				09F1E56B200EA17D0031FC0B /* AppDelegate.swift */,
 				09F1E56D200EA17D0031FC0B /* ViewController.swift */,
-				09F1E56F200EA17D0031FC0B /* Main.storyboard */,
 				09F1E572200EA17D0031FC0B /* Assets.xcassets */,
-				09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */,
 				09F1E577200EA17D0031FC0B /* Info.plist */,
 			);
 			path = Parasite;
@@ -116,6 +174,8 @@
 				4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */,
 				C09575DB18C5CB77F9B60BC3 /* Pods-SWABLE-Server.debug.xcconfig */,
 				900BB15F678E32778D19C3B3 /* Pods-SWABLE-Server.release.xcconfig */,
+				1085FE242141C0A91966ACB1 /* Pods-Parasite.debug.xcconfig */,
+				F452D7BB7BBCC02C65E8BFC9 /* Pods-Parasite.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -125,6 +185,7 @@
 			children = (
 				0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */,
 				120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */,
+				545C6EA24225E19EAFEBD70A /* Pods_Parasite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09F1E57A200EA17D0031FC0B /* Build configuration list for PBXNativeTarget "Parasite" */;
 			buildPhases = (
+				4601111CB48529DFE138465A /* [CP] Check Pods Manifest.lock */,
 				09F1E565200EA17D0031FC0B /* Sources */,
 				09F1E566200EA17D0031FC0B /* Frameworks */,
 				09F1E567200EA17D0031FC0B /* Resources */,
+				58D7371B335230CE223A50EE /* [CP] Embed Pods Frameworks */,
+				87DC064523F418A2DA72CD40 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,9 +362,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F1E576200EA17D0031FC0B /* LaunchScreen.storyboard in Resources */,
+				09623014201140D30049392D /* Main.storyboard in Resources */,
 				09F1E573200EA17D0031FC0B /* Assets.xcassets in Resources */,
-				09F1E571200EA17D0031FC0B /* Main.storyboard in Resources */,
+				09623013201140D30049392D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +389,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4601111CB48529DFE138465A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Parasite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4CC438C381FDC85DAD92F324 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +425,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		58D7371B335230CE223A50EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Parasite/Pods-Parasite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Anchorage-iOS/Anchorage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parasite/Pods-Parasite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		66CF08F7D428C8E3B22BD040 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +456,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87DC064523F418A2DA72CD40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parasite/Pods-Parasite-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9DFABDD7F282313E921F7597 /* [CP] Copy Pods Resources */ = {
@@ -434,11 +549,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4320F372010E1C600BF69C2 /* LogViewController.swift in Sources */,
-				D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */,
+				09622FFE20113FD70049392D /* SystemInfoTextView.swift in Sources */,
 				09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */,
 				09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */,
-				D4320F31200FCFDA00BF69C2 /* Constants.swift in Sources */,
+				0962300C201140B50049392D /* Battery.swift in Sources */,
+				09623009201140B50049392D /* RZIOKit.c in Sources */,
+				0962300B201140B50049392D /* System.swift in Sources */,
+				0962300A201140B50049392D /* Process.swift in Sources */,
+				0962300D201140B50049392D /* IOReturn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,20 +589,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09F1E56F200EA17D0031FC0B /* Main.storyboard */ = {
+		0962300F201140D30049392D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				09F1E570200EA17D0031FC0B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09F1E575200EA17D0031FC0B /* Base */,
+				09623010201140D30049392D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		09623011201140D30049392D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09623012201140D30049392D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D4320F17200E9CFF00BF69C2 /* MainMenu.xib */ = {
@@ -508,6 +626,7 @@
 /* Begin XCBuildConfiguration section */
 		09F1E578200EA17D0031FC0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1085FE242141C0A91966ACB1 /* Pods-Parasite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +636,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Parasite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Parasite/Parasite-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,6 +644,7 @@
 		};
 		09F1E579200EA17D0031FC0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F452D7BB7BBCC02C65E8BFC9 /* Pods-Parasite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +654,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raizlabs.Parasite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Parasite/Parasite-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

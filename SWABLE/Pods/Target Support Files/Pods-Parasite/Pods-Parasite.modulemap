@@ -1,0 +1,6 @@
+framework module Pods_Parasite {
+  umbrella header "Pods-Parasite-umbrella.h"
+
+  export *
+  module * { export * }
+}
