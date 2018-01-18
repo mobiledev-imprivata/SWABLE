@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Anchorage
 
 class ViewController: UIViewController {
     
@@ -17,105 +18,147 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBOutlet weak var launchStressTestButton: UIButton!
-    @IBOutlet weak var stressTestIndicatorLabel: UILabel!
-    @IBOutlet weak var thermalsLabel: UILabel!
-    @IBOutlet weak var memoryUsageLabel: UILabel!
+    var launchStressTestButton = UIButton()
+    let stressTestIndicatorLabel = UILabel()
+    let textField = SystemInfoTextView()
     
+    let healthyColor: UIColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+    let stressColor: UIColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+    
+    var workGroup: DispatchGroup = DispatchGroup()
+    var workItems: [DispatchWorkItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        createUIElements()
+        
+        // Register a 60 Hz timer for updating the labels in the controller.
+        let timer = Timer(timeInterval: 0.2, repeats: true) { [weak self] (timer) in
+            self?.onTimerUpdate()
+        }
+        RunLoop.main.add(timer, forMode: .commonModes)
+        updateTimer = timer
+        
+        // Update the system info view once to purge incorrect values at startup
+        textField.update()
+    }
+    
+    func createUIElements() {
+        view.backgroundColor = healthyColor
+        
+        // Configure UI elements
+        launchStressTestButton.setTitle("💀 Engage Stress 💀", for: .normal)
+        launchStressTestButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 12, bottom: 6, right: 12)
         launchStressTestButton.layer.cornerRadius = 5.0
         launchStressTestButton.layer.borderColor = UIColor.white.cgColor
-        launchStressTestButton.layer.borderWidth = 2.0
+        launchStressTestButton.layer.borderWidth = 3.0
+        launchStressTestButton.setTitleColor(.white, for: .normal)
+        launchStressTestButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
+        view.addSubview(launchStressTestButton)
+        launchStressTestButton.centerXAnchor == view.centerXAnchor
+        launchStressTestButton.centerYAnchor == view.centerYAnchor * 0.25
+        launchStressTestButton.addTarget(self, action: #selector(onStressButtonPressed), for: .touchUpInside)
         
-        updateTimer = Timer.scheduledTimer(withTimeInterval: 0.16, repeats: true, block: { [weak self] (timer) in
-            guard let sself = self else {
-                return
-            }
-            sself.thermalsLabel.text = sself.getThermalStateString()
-            sself.memoryUsageLabel.text = sself.memoryUsageBytes().map { "\($0 / 1024 / 1024) MB" } ?? "Unknown"
-        })
+        textField.isScrollEnabled = false
+        textField.backgroundColor = .clear
+        textField.textColor = .white
+        textField.textAlignment = .center
+        textField.font = UIFont.systemFont(ofSize: 14)
+        view.addSubview(textField)
+        textField.topAnchor == launchStressTestButton.bottomAnchor + 8
+        textField.leftAnchor == view.leftAnchor + 48
+        textField.rightAnchor == view.rightAnchor - 48
         
+        stressTestIndicatorLabel.text = "STRESS ENGAGED"
+        stressTestIndicatorLabel.textColor = .white
+        stressTestIndicatorLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        view.addSubview(stressTestIndicatorLabel)
+        stressTestIndicatorLabel.centerXAnchor == launchStressTestButton.centerXAnchor
+        stressTestIndicatorLabel.centerYAnchor == launchStressTestButton.centerYAnchor
+        stressTestIndicatorLabel.isHidden = true
     }
     
-    
-    @IBAction func dispatchStressThreads() {
+    /// Timer-managed update. Automatically called.
+    private func onTimerUpdate() {
+        textField.update()
         
-        stressTestIndicatorLabel.isHidden = false
-        
-        let numCores = ProcessInfo.processInfo.processorCount
-        print("Launching stress threads for \(numCores) cores.")
-        for _ in 0 ..< numCores {
-            DispatchQueue.global().async {
-                self.stressThread()
+        // Cancel all the stress threads if memory available gets too low.
+        let memoryUsage = System.memoryUsage()
+        if memoryUsage.free < 0.025 { // 50 MB
+            for item in workItems {
+                item.cancel()
             }
         }
+        
     }
     
-    /// Gives a CPU core a lot to do. Here we do some grammar substitutions.
-    func stressThread() {
-        // Generate the l-system grammar for a Koch snowflake.
-        var tokenString = "F"
-        while true {
-            var newString = ""
-            for char in tokenString {
-                if char == "F" {
-                    newString += "F+F--F+F"
-                }
-                else {
-                    newString += "\(char)"
-                }
-            }
+    @objc func onStressButtonPressed() {
+        
+        dispatchStressThreads()
+        
+        // Animate a transition from the "healthy" look to the "stressed" look.
+        UIView.animate(withDuration: 0.2, animations: {
+            self.launchStressTestButton.alpha = 0
+        }) { (finished) in
+            self.launchStressTestButton.isHidden = true
             
-            tokenString = newString
+            self.stressTestIndicatorLabel.alpha = 0
+            self.stressTestIndicatorLabel.isHidden = false
+            UIView.animate(withDuration: 0.5) {
+                self.stressTestIndicatorLabel.alpha = 1
+                self.view.backgroundColor = self.stressColor
+            }
         }
         
-    }
-
-
-}
-
-extension ViewController {
-    
-    func getThermalStateString() -> String {
-        switch ProcessInfo.processInfo.thermalState {
-        case ProcessInfo.ThermalState.critical:
-            return "Critical"
-        case ProcessInfo.ThermalState.serious:
-            return "Serious"
-        case .nominal:
-            return "Nominal"
-        case .fair:
-            return "Fair"
-        }
     }
     
     /*
-     Adapted from https://stackoverflow.com/a/39048651
-     Reports the amount of RAM used in bytes.
+     Enqueues `n` work items that greatly tax the hardware, where `n`
+     is the number of logical cores in the CPU.
+     
+     The DispatchGroup managing these work items will relaunch its threads
+     when they all end.
      */
-    func memoryUsageBytes() -> UInt64? {
-        var info = mach_task_basic_info()
-        var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.size)/4
+    func dispatchStressThreads() {
         
-        let kerr: kern_return_t = withUnsafeMutablePointer(to: &info) {
-            $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
-                task_info(mach_task_self_,
-                          task_flavor_t(MACH_TASK_BASIC_INFO),
-                          $0,
-                          &count)
+        let numCores = System.logicalCores()
+        print("Launching stress threads for \(numCores) cores.")
+        for _ in 0 ..< numCores {
+            // This smells bad, but I'm not sure how else to make a group of workItems with arbitrary length
+            // and allow the workItems to monitor themselves for cancellation status.
+            var workItem: DispatchWorkItem!
+            workItem = DispatchWorkItem {
+                // Gives a CPU core a lot to do. Here we do some grammar substitutions.
+                // Ideally, we'd want to use some algorithm with very high (constant) space
+                // and time complexity.
+                var tokenString = "F"
+                while !workItem.isCancelled {
+                    tokenString = Array(tokenString).map {
+                        return $0 == "F" ? "F+F--F+F" : "\($0)"
+                        }.joined()
+                }
+                
+                //print("Terminated stress thread.")
+            }
+            
+            // Put the work item in the dispatch group and add it to our array
+            // so we can reference it for cancellation later
+            DispatchQueue.global().async(group: workGroup, execute: workItem)
+            workItems.append(workItem)
+        }
+        
+        workGroup.notify(queue: DispatchQueue.main) { [weak self] in
+            print("All stress threads terminated.")
+            if let weakSelf = self {
+                weakSelf.workItems.removeAll()
+                
+                // Launch all the threads again.
+                weakSelf.dispatchStressThreads()
             }
         }
         
-        if kerr == KERN_SUCCESS {
-            return info.resident_size
-        }
-        else {
-            return nil
-        }
     }
+
 }
 
