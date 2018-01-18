@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentViewController = LogViewController()
 
         beacon.startAdvertising()
-        scanner.scanContinuously(interval: 2)
+        scanner.startScanning()
     }
 
 }

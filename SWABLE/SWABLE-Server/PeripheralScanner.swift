@@ -12,7 +12,6 @@ final class PeripheralScanner: NSObject {
 
     private var centralManager: CBCentralManager!
 
-    private var scanInterval: TimeInterval = 0
     private var deferredWork: (() -> Void)?
 
     override init() {
@@ -24,7 +23,7 @@ final class PeripheralScanner: NSObject {
         stopScanning()
     }
 
-    func scan() {
+    func startScanning() {
         Message.post()
 
         guard !centralManager.isScanning else {
@@ -35,27 +34,20 @@ final class PeripheralScanner: NSObject {
         case .poweredOn:
             centralManager.scanForPeripherals(withServices: [
                 CBUUID(string: Constants.Peripheral.service)
-            ], options: nil)
+            ], options: [
+                CBCentralManagerScanOptionAllowDuplicatesKey: true
+            ])
 
         case .unknown:
-            deferredWork = scan
+            deferredWork = startScanning
 
         default:
             Message.post("Scan failed because bluetooth is unvailable!")
         }
     }
 
-    func scanContinuously(interval: TimeInterval) {
-        Message.post(interval)
-
-        scanInterval = interval
-        scan()
-    }
-
     func stopScanning() {
         Message.post()
-
-        scanInterval = 0
         centralManager.stopScan()
     }
 
@@ -73,16 +65,7 @@ extension PeripheralScanner: CBCentralManagerDelegate {
     }
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        central.stopScan()
         Message.post(peripheral, "RSSI: \(RSSI)")
-
-        if scanInterval > 0 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + scanInterval) { [weak self] in
-                if (self?.scanInterval ?? 0) > 0 {
-                    self?.scan()
-                }
-            }
-        }
     }
 
 }
