@@ -19,13 +19,18 @@ final class BeaconMonitor: NSObject {
     weak var delegate: BeaconMonitorDelegate?
 
     private let beaconRegion = CLBeaconRegion(
-        proximityUUID: UUID(uuidString: "0130C53E-97C1-421A-81C0-FC8F453295AD")!,
-        major: 123,
-        minor: 456,
-        identifier: "com.raizlabs.swable-server"
+        proximityUUID: Constants.Beacon.proximityUUID,
+        major: Constants.Beacon.major,
+        minor: Constants.Beacon.minor,
+        identifier: Constants.Beacon.identifier
     )
 
     private var locationManager: CLLocationManager?
+
+    override init() {
+        super.init()
+        beaconRegion.notifyEntryStateOnDisplay = true
+    }
 
     func start() {
         Message.post()
@@ -87,12 +92,8 @@ extension BeaconMonitor: CLLocationManagerDelegate {
         delegate?.beaconMonitorDidStart(self)
     }
 
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        Message.post(region)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        Message.post(region)
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        Message.post(state, region)
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -114,6 +115,18 @@ extension CLAuthorizationStatus: CustomStringConvertible {
         case .denied: return "Denied"
         case .authorizedAlways: return "Always"
         case .authorizedWhenInUse: return "When in Use"
+        }
+    }
+
+}
+
+extension CLRegionState: CustomStringConvertible {
+
+    public var description: String {
+        switch self {
+        case .inside: return "Inside"
+        case .outside: return "Outside"
+        case .unknown: return "Unknown"
         }
     }
 
