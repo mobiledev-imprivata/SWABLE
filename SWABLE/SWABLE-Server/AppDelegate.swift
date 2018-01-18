@@ -13,15 +13,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    private let beacon = Beacon()
+    private let scanner = PeripheralScanner()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-    }
+        window.contentViewController = LogViewController()
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        beacon.startAdvertising()
+        scanner.startScanning()
     }
-
 
 }
 
+extension AppDelegate: BeaconDelegate {
+
+    func beaconDidStartAdvertising(_ beacon: Beacon) {
+        Message.post()
+    }
+
+    func beaconDidStopAdvertising(_ beacon: Beacon) {
+        Message.post()
+    }
+
+}

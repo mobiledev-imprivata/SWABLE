@@ -12,12 +12,25 @@
 		09F1E571200EA17D0031FC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E56F200EA17D0031FC0B /* Main.storyboard */; };
 		09F1E573200EA17D0031FC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E572200EA17D0031FC0B /* Assets.xcassets */; };
 		09F1E576200EA17D0031FC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F1E574200EA17D0031FC0B /* LaunchScreen.storyboard */; };
+		504659C161B2E9D80425A46C /* Pods_SWABLE_Server.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */; };
 		A1D4BF9BD0075E4B658B325C /* Pods_SWABLE_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */; };
 		D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */; };
 		D4320F16200E9CFF00BF69C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4320F15200E9CFF00BF69C2 /* Assets.xcassets */; };
 		D4320F19200E9CFF00BF69C2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4320F17200E9CFF00BF69C2 /* MainMenu.xib */; };
+		D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */; };
+		D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
+		D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
+		D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F21200FA0EC00BF69C2 /* Message.swift */; };
+		D4320F2B200FC37A00BF69C2 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2A200FC37A00BF69C2 /* Peripheral.swift */; };
+		D4320F2D200FCE4600BF69C2 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2C200FCE4600BF69C2 /* Beacon.swift */; };
+		D4320F2F200FCF2C00BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
+		D4320F30200FCFD900BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
+		D4320F31200FCFDA00BF69C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F2E200FCF2C00BF69C2 /* Constants.swift */; };
+		D4320F33200FF18A00BF69C2 /* PeripheralScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F32200FF18A00BF69C2 /* PeripheralScanner.swift */; };
+		D4320F35200FF68E00BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
+		D4320F362010E1C600BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
+		D4320F372010E1C600BF69C2 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4320F34200FF68E00BF69C2 /* LogViewController.swift */; };
 		D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274F9200E9BBB000035B0 /* AppDelegate.swift */; };
-		D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45274FB200E9BBB000035B0 /* ViewController.swift */; };
 		D4527501200E9BBB000035B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4527500200E9BBB000035B0 /* Assets.xcassets */; };
 		D4527504200E9BBB000035B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -31,17 +44,26 @@
 		09F1E572200EA17D0031FC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F1E575200EA17D0031FC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F1E577200EA17D0031FC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Server.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
+		900BB15F678E32778D19C3B3 /* Pods-SWABLE-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Server.release.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.release.xcconfig"; sourceTree = "<group>"; };
+		C09575DB18C5CB77F9B60BC3 /* Pods-SWABLE-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWABLE-Server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.debug.xcconfig"; sourceTree = "<group>"; };
 		D4320F11200E9CFF00BF69C2 /* SWABLE-Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4320F15200E9CFF00BF69C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4320F18200E9CFF00BF69C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D4320F1A200E9CFF00BF69C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4320F1B200E9CFF00BF69C2 /* SWABLE_Server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWABLE_Server.entitlements; sourceTree = "<group>"; };
+		D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconMonitor.swift; sourceTree = "<group>"; };
+		D4320F21200FA0EC00BF69C2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D4320F2A200FC37A00BF69C2 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		D4320F2C200FCE4600BF69C2 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		D4320F2E200FCF2C00BF69C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4320F32200FF18A00BF69C2 /* PeripheralScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralScanner.swift; sourceTree = "<group>"; };
+		D4320F34200FF68E00BF69C2 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		D45274F6200E9BBB000035B0 /* SWABLE-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SWABLE-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45274F9200E9BBB000035B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D45274FB200E9BBB000035B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4527500200E9BBB000035B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4527503200E9BBB000035B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4527505200E9BBB000035B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504659C161B2E9D80425A46C /* Pods_SWABLE_Server.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +114,8 @@
 			children = (
 				26A7037192C3BE6C418634F0 /* Pods-SWABLE-Client.debug.xcconfig */,
 				4DD297B462B69B23EE99BB36 /* Pods-SWABLE-Client.release.xcconfig */,
+				C09575DB18C5CB77F9B60BC3 /* Pods-SWABLE-Server.debug.xcconfig */,
+				900BB15F678E32778D19C3B3 /* Pods-SWABLE-Server.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */,
+				120B4600CA42B536084BF395 /* Pods_SWABLE_Server.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				D4320F13200E9CFF00BF69C2 /* AppDelegate.swift */,
+				D4320F2C200FCE4600BF69C2 /* Beacon.swift */,
+				D4320F32200FF18A00BF69C2 /* PeripheralScanner.swift */,
 				D4320F15200E9CFF00BF69C2 /* Assets.xcassets */,
 				D4320F17200E9CFF00BF69C2 /* MainMenu.xib */,
 				D4320F1A200E9CFF00BF69C2 /* Info.plist */,
@@ -115,12 +143,23 @@
 			path = "SWABLE-Server";
 			sourceTree = "<group>";
 		};
+		D4320F23200FA1CE00BF69C2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D4320F2E200FCF2C00BF69C2 /* Constants.swift */,
+				D4320F21200FA0EC00BF69C2 /* Message.swift */,
+				D4320F34200FF68E00BF69C2 /* LogViewController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		D45274ED200E9BBB000035B0 = {
 			isa = PBXGroup;
 			children = (
 				D45274F8200E9BBB000035B0 /* SWABLE-Client */,
 				D4320F12200E9CFF00BF69C2 /* SWABLE-Server */,
 				09F1E56A200EA17D0031FC0B /* Parasite */,
+				D4320F23200FA1CE00BF69C2 /* Shared */,
 				D45274F7200E9BBB000035B0 /* Products */,
 				18441DE80A4E29A3CE9D9A0D /* Pods */,
 				8E059A3E37E4A97128270E50 /* Frameworks */,
@@ -141,10 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				D45274F9200E9BBB000035B0 /* AppDelegate.swift */,
-				D45274FB200E9BBB000035B0 /* ViewController.swift */,
 				D4527500200E9BBB000035B0 /* Assets.xcassets */,
 				D4527502200E9BBB000035B0 /* LaunchScreen.storyboard */,
 				D4527505200E9BBB000035B0 /* Info.plist */,
+				D4320F1F200FA07E00BF69C2 /* BeaconMonitor.swift */,
+				D4320F2A200FC37A00BF69C2 /* Peripheral.swift */,
 			);
 			path = "SWABLE-Client";
 			sourceTree = "<group>";
@@ -173,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4320F1C200E9CFF00BF69C2 /* Build configuration list for PBXNativeTarget "SWABLE-Server" */;
 			buildPhases = (
+				FB01209F3978A26E6434C303 /* [CP] Check Pods Manifest.lock */,
 				D4320F0D200E9CFF00BF69C2 /* Sources */,
 				D4320F0E200E9CFF00BF69C2 /* Frameworks */,
 				D4320F0F200E9CFF00BF69C2 /* Resources */,
+				BD98070BECA14D28D1FAF750 /* [CP] Embed Pods Frameworks */,
+				9DFABDD7F282313E921F7597 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,7 +332,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
+				"${BUILT_PRODUCTS_DIR}/Anchorage-iOS/Anchorage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -315,6 +358,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9DFABDD7F282313E921F7597 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B1C0A350BDC07A635F735B8B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +391,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BD98070BECA14D28D1FAF750 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Anchorage-macOS/Anchorage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB01209F3978A26E6434C303 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWABLE-Server-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -340,8 +434,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4320F372010E1C600BF69C2 /* LogViewController.swift in Sources */,
+				D4320F25200FA1DB00BF69C2 /* Message.swift in Sources */,
 				09F1E56E200EA17D0031FC0B /* ViewController.swift in Sources */,
 				09F1E56C200EA17D0031FC0B /* AppDelegate.swift in Sources */,
+				D4320F31200FCFDA00BF69C2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +446,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4320F35200FF68E00BF69C2 /* LogViewController.swift in Sources */,
 				D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */,
+				D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */,
+				D4320F33200FF18A00BF69C2 /* PeripheralScanner.swift in Sources */,
+				D4320F2D200FCE4600BF69C2 /* Beacon.swift in Sources */,
+				D4320F2F200FCF2C00BF69C2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D45274FC200E9BBB000035B0 /* ViewController.swift in Sources */,
+				D4320F2B200FC37A00BF69C2 /* Peripheral.swift in Sources */,
+				D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */,
 				D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */,
+				D4320F362010E1C600BF69C2 /* LogViewController.swift in Sources */,
+				D4320F22200FA0EC00BF69C2 /* Message.swift in Sources */,
+				D4320F30200FCFD900BF69C2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +540,7 @@
 		};
 		D4320F1D200E9CFF00BF69C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09575DB18C5CB77F9B60BC3 /* Pods-SWABLE-Server.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SWABLE-Server/SWABLE_Server.entitlements";
@@ -443,8 +550,8 @@
 				DEVELOPMENT_TEAM = 336S848KQ4;
 				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -453,6 +560,7 @@
 		};
 		D4320F1E200E9CFF00BF69C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 900BB15F678E32778D19C3B3 /* Pods-SWABLE-Server.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SWABLE-Server/SWABLE_Server.entitlements";
@@ -462,8 +570,8 @@
 				DEVELOPMENT_TEAM = 336S848KQ4;
 				INFOPLIST_FILE = "SWABLE-Server/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Server";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Server";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
@@ -587,7 +695,7 @@
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,7 +712,7 @@
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.SWABLE-Client";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raizlabs.swable-Client";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

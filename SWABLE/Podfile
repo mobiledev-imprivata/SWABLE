@@ -1,8 +1,12 @@
-platform :ios, '11.0'
 use_frameworks!
 
+pod 'Anchorage', '~> 4.0'
+
 target 'SWABLE-Client' do
+  platform :ios, '11.0'
 
-  pod 'Anchorage', '~> 4.0'
+end
 
+target 'SWABLE-Server' do
+  platform :osx, '10.13'
 end
