@@ -49,8 +49,6 @@ class SystemInfoTextView: UITextView {
         // Add memory usage info
         let memoryUsage = System.memoryUsage()
         
-        //memoryUsageLabel.text = memoryUsageBytes().map { "\($0 / 1024 / 1024) MB" } ?? "Unknown"
-        
         textChunks.append("""
             ┏━━━━━━━━━━━━━━━━━━━┓
             Memory

@@ -155,14 +155,14 @@
 		09F1E56A200EA17D0031FC0B /* Parasite */ = {
 			isa = PBXGroup;
 			children = (
+				09F1E577200EA17D0031FC0B /* Info.plist */,
+				09F1E572200EA17D0031FC0B /* Assets.xcassets */,
 				0962300E201140D30049392D /* Storyboards */,
 				09622FFF201140B50049392D /* Dependencies */,
-				09622FFD20113FD70049392D /* Parasite-Bridging-Header.h */,
-				09622FFC20113FD70049392D /* SystemInfoTextView.swift */,
 				09F1E56B200EA17D0031FC0B /* AppDelegate.swift */,
 				09F1E56D200EA17D0031FC0B /* ViewController.swift */,
-				09F1E572200EA17D0031FC0B /* Assets.xcassets */,
-				09F1E577200EA17D0031FC0B /* Info.plist */,
+				09622FFC20113FD70049392D /* SystemInfoTextView.swift */,
+				09622FFD20113FD70049392D /* Parasite-Bridging-Header.h */,
 			);
 			path = Parasite;
 			sourceTree = "<group>";

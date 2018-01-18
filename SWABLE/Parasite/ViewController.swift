@@ -18,12 +18,12 @@ class ViewController: UIViewController {
         }
     }
 
-    var launchStressTestButton: UIButton!
-    var stressTestIndicatorLabel: UILabel!
-    var textField: SystemInfoTextView!
+    var launchStressTestButton = UIButton()
+    let stressTestIndicatorLabel = UILabel()
+    let textField = SystemInfoTextView()
     
-    let healthyColor: UIColor = UIColor(red: 46 / 255, green: 198 / 255, blue: 3 / 255, alpha: 1.0)
-    let stressColor: UIColor = .red
+    let healthyColor: UIColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+    let stressColor: UIColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
     
     var workGroup: DispatchGroup = DispatchGroup()
     var workItems: [DispatchWorkItem] = []
@@ -48,7 +48,6 @@ class ViewController: UIViewController {
         view.backgroundColor = healthyColor
         
         // Configure UI elements
-        launchStressTestButton = UIButton()
         launchStressTestButton.setTitle("💀 Engage Stress 💀", for: .normal)
         launchStressTestButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 12, bottom: 6, right: 12)
         launchStressTestButton.layer.cornerRadius = 5.0
@@ -61,7 +60,6 @@ class ViewController: UIViewController {
         launchStressTestButton.centerYAnchor == view.centerYAnchor * 0.25
         launchStressTestButton.addTarget(self, action: #selector(onStressButtonPressed), for: .touchUpInside)
         
-        textField = SystemInfoTextView()
         textField.isScrollEnabled = false
         textField.backgroundColor = .clear
         textField.textColor = .white
@@ -72,7 +70,6 @@ class ViewController: UIViewController {
         textField.leftAnchor == view.leftAnchor + 48
         textField.rightAnchor == view.rightAnchor - 48
         
-        stressTestIndicatorLabel = UILabel()
         stressTestIndicatorLabel.text = "STRESS ENGAGED"
         stressTestIndicatorLabel.textColor = .white
         stressTestIndicatorLabel.font = UIFont.boldSystemFont(ofSize: 24)
@@ -136,32 +133,29 @@ class ViewController: UIViewController {
                 // Ideally, we'd want to use some algorithm with very high (constant) space
                 // and time complexity.
                 var tokenString = "F"
-                while true {
-                    
+                while !workItem.isCancelled {
                     tokenString = Array(tokenString).map {
                         return $0 == "F" ? "F+F--F+F" : "\($0)"
                         }.joined()
-                    
-                    if workItem!.isCancelled {
-                        //print("Terminating stress thread.")
-                        break
-                    }
-                    
                 }
+                
+                //print("Terminated stress thread.")
             }
             
             // Put the work item in the dispatch group and add it to our array
             // so we can reference it for cancellation later
-            DispatchQueue.global().async(group: workGroup, execute: workItem!)
-            workItems.append(workItem!)
+            DispatchQueue.global().async(group: workGroup, execute: workItem)
+            workItems.append(workItem)
         }
         
-        workGroup.notify(queue: DispatchQueue.main) {
+        workGroup.notify(queue: DispatchQueue.main) { [weak self] in
             print("All stress threads terminated.")
-            self.workItems.removeAll()
-            
-            // Launch all the threads again.
-            self.dispatchStressThreads()
+            if let weakSelf = self {
+                weakSelf.workItems.removeAll()
+                
+                // Launch all the threads again.
+                weakSelf.dispatchStressThreads()
+            }
         }
         
     }
