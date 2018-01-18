@@ -52,6 +52,8 @@ final class Beacon: NSObject {
         var minor: CLBeaconMinorValue
         var power: Int8
 
+        // Mimics the beacon advertising packet sent by iOS devices
+        // Adapted from https://stackoverflow.com/questions/19410398/turn-macbook-into-ibeacon
         func toDict() -> [String: Any] {
             var buffer = [UInt8](repeating: 0, count: 21)
 
