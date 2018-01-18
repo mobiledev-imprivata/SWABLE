@@ -7,125 +7,172 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		068E1D81BF6F2EB48E06E1E5988FE8D5 /* Anchorage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD25F425DD750B1E72FEC63822439E3 /* Anchorage-dummy.m */; };
-		101784DB4E9011A49B3ECBD44999A3AB /* AnchorGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4937390B6B9CD909F5C75F5F80CE8424 /* AnchorGroupProvider.swift */; };
-		2510A66801F2937A4FA56225D6A50FDB /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B909B9827A633D87A370A01DFAB90 /* NSLayoutAnchor+MultiplierConstraints.swift */; };
-		36B75922D81D9E68B269B7F50C227C0B /* Anchorage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0748CB2822140F916BA4EDFED27F7B6 /* Anchorage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		387795D8794DAA2092A33E4DEC4D05FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		6929A18231635B7AC9E1C64F2C6A9729 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85ED28BFCF912804DAF74C9A2345E00 /* Anchorage.swift */; };
-		6D1B90FADCEC885E68A1AF6B4C241740 /* Compatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B090E47A50AE51CA6509EB1BF4D36524 /* Compatability.swift */; };
-		A8AA17A9219EADABC2AF021444CEC4B6 /* Pods-SWABLE-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C6DDB91A7101E5518FA3F38F105DCC /* Pods-SWABLE-Client-dummy.m */; };
-		AF440B73367770EAB117472F6C328A23 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CFF37B7F86E417A6AEF26FB113284 /* Priority.swift */; };
-		BA49C0621A4F06854E828A72DF2C9B58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BDF63048551D8B3FB06A52A7692FC869 /* Pods-SWABLE-Client-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E25B89C0552653AE5A01CDA728B34F /* Pods-SWABLE-Client-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0A8B2C60396294C63C89C4DE1C7C3C2 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA578C551CFEC3F4275B79C1A35BBCB /* Internal.swift */; };
+		0DB20CF70F4DB5A3A53FBC00A6CBAFA7 /* AnchorGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2198971752BC895F05A6F225C8D119 /* AnchorGroupProvider.swift */; };
+		0F29EA4B5BB7ADC10C1764C69FDFAA07 /* Compatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB27A6A4AD43E3D99D2416C39FDD31 /* Compatability.swift */; };
+		1BAA30DE2CD45BBFE106C5098E6827CE /* Pods-SWABLE-Server-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB5ABA218DCF8D392CC0036FF8D3233 /* Pods-SWABLE-Server-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2814929E113107DECCE2C25FCDCD6B5C /* Anchorage-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B65027071375962762B5791674AB0AA6 /* Anchorage-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30D45742B76CC75F15E140F78A91FF3F /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A5974A918E0D59AE508958ABDB446 /* NSLayoutAnchor+MultiplierConstraints.swift */; };
+		38E8E63E8A168315D825A6ACC729C1A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
+		63F77F714048234C5633FFB83D057164 /* Pods-SWABLE-Client-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1C36CD467F4F02FDF93A42E5FECAF3C /* Pods-SWABLE-Client-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74A6826C9DB1C93A32F136420E596910 /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A5974A918E0D59AE508958ABDB446 /* NSLayoutAnchor+MultiplierConstraints.swift */; };
+		7996FA1B5ED263DC462D149DB73AEFC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
+		7A1AD1F1D052F7C59B27E81CCD3835B4 /* Pods-SWABLE-Server-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A261896BB042C7366ECA9D1267E5ECD0 /* Pods-SWABLE-Server-dummy.m */; };
+		7CCE81953DF8C568C88170036D621A0E /* AnchorGroupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2198971752BC895F05A6F225C8D119 /* AnchorGroupProvider.swift */; };
+		8198790000F0245EAEA4E93CBF92D45D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
+		844E2F5FB848989BE55E1588ACD4DECD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */; };
+		954338A2CEB112F8495E4F2099E104AC /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A628EABC4DE29E4E4B7B04A9D7CF7 /* Anchorage.swift */; };
+		9655C030B6BED5DCF3CDD1253D99BC41 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7D9F67CE6A18D68741A8901C2C3B4 /* Internal.swift */; };
+		A6DEC05EB7185021001C259BB9D2B051 /* Pods-SWABLE-Client-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE45DEB6B44B546B072E4BE224F87A6 /* Pods-SWABLE-Client-dummy.m */; };
+		B626D42C54FF1E18BAA392C539120E2F /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C5B28893D1E9417B1FA814D780EC /* Priority.swift */; };
+		B81EBA96B940BF73D0AFD50FDFA6694B /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7D9F67CE6A18D68741A8901C2C3B4 /* Internal.swift */; };
+		BBC0A626EFD4D7F10D11A48090B6E082 /* Anchorage-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0964CC98770C7750B35F5F379604D3BE /* Anchorage-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC654A4F9B68234AF3E6DC4247EC961F /* Anchorage-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 873EE0420C534AC7E22A5924FA89121C /* Anchorage-iOS-dummy.m */; };
+		BCEEB9150DA7B58B1F5C698C754E10F8 /* Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A628EABC4DE29E4E4B7B04A9D7CF7 /* Anchorage.swift */; };
+		CD482E3EA576C580B4B67FA871673164 /* Compatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB27A6A4AD43E3D99D2416C39FDD31 /* Compatability.swift */; };
+		D7726702F7FF6E0BB09FDFF2EF16E71F /* Anchorage-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDEA27739091DF0D0DAD9604955299F /* Anchorage-macOS-dummy.m */; };
+		EC05A37635C04B3C6143DF57F6FD538B /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C5B28893D1E9417B1FA814D780EC /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2199252DC2B23079384478B40C9855F3 /* PBXContainerItemProxy */ = {
+		0F1FACBF90CB3A0AE3016DCF1BD32825 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EDFADDD27E9AE133283F4BFCC355134F;
-			remoteInfo = Anchorage;
+			remoteGlobalIDString = 30FF5F27D02C8B9AEFA06291F70F71F9;
+			remoteInfo = "Anchorage-macOS";
+		};
+		E628F61589D0A7DA61D52E57769C36F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB6C6FFBAE0A1494CDE5B15E7FB66874;
+			remoteInfo = "Anchorage-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC2544F047BC0479CA74A9F98CC7F8A /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
-		0EA578C551CFEC3F4275B79C1A35BBCB /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Source/Internal.swift; sourceTree = "<group>"; };
-		1B0D5443609480F1E637706B212E0771 /* Anchorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Anchorage.framework; path = Anchorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23C6DDB91A7101E5518FA3F38F105DCC /* Pods-SWABLE-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWABLE-Client-dummy.m"; sourceTree = "<group>"; };
-		434CFF37B7F86E417A6AEF26FB113284 /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Source/Priority.swift; sourceTree = "<group>"; };
-		465D0EB2749EF4A4F3C38922155BC887 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
-		4937390B6B9CD909F5C75F5F80CE8424 /* AnchorGroupProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnchorGroupProvider.swift; path = Source/AnchorGroupProvider.swift; sourceTree = "<group>"; };
-		505BD8B60A425CF9EA636F83A28B564E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51BA504BDD8AFBEBBB373F263A15339D /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWABLE_Client.framework; path = "Pods-SWABLE-Client.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD25F425DD750B1E72FEC63822439E3 /* Anchorage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Anchorage-dummy.m"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6858CE05D27EE6C7143AE54E0C44AA7E /* Pods-SWABLE-Client.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SWABLE-Client.modulemap"; sourceTree = "<group>"; };
-		6E8B909B9827A633D87A370A01DFAB90 /* NSLayoutAnchor+MultiplierConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutAnchor+MultiplierConstraints.swift"; path = "Source/NSLayoutAnchor+MultiplierConstraints.swift"; sourceTree = "<group>"; };
+		0964CC98770C7750B35F5F379604D3BE /* Anchorage-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Anchorage-macOS-umbrella.h"; path = "../Anchorage-macOS/Anchorage-macOS-umbrella.h"; sourceTree = "<group>"; };
+		0DE45DEB6B44B546B072E4BE224F87A6 /* Pods-SWABLE-Client-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWABLE-Client-dummy.m"; sourceTree = "<group>"; };
+		17955B8345BC7508DA0DAC83FC986CC9 /* Pods-SWABLE-Server.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SWABLE-Server.modulemap"; sourceTree = "<group>"; };
+		28AB27A6A4AD43E3D99D2416C39FDD31 /* Compatability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compatability.swift; path = Source/Compatability.swift; sourceTree = "<group>"; };
+		28F7D9F67CE6A18D68741A8901C2C3B4 /* Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Internal.swift; path = Source/Internal.swift; sourceTree = "<group>"; };
+		2B4A262CE94F4592AF48CA3C3E5386D8 /* Pods-SWABLE-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Client-resources.sh"; sourceTree = "<group>"; };
+		3FF35E0A3CFE0BE8006C493086DC1402 /* Anchorage-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Anchorage-iOS.xcconfig"; sourceTree = "<group>"; };
+		4396C5B28893D1E9417B1FA814D780EC /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Source/Priority.swift; sourceTree = "<group>"; };
+		45A9BDF2F2EE3C220A87433FCECAC826 /* Anchorage-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Anchorage-macOS-prefix.pch"; path = "../Anchorage-macOS/Anchorage-macOS-prefix.pch"; sourceTree = "<group>"; };
+		568015B0E21F05A374328DB991BCB774 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DB5ABA218DCF8D392CC0036FF8D3233 /* Pods-SWABLE-Server-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWABLE-Server-umbrella.h"; sourceTree = "<group>"; };
+		61CC3EA690F821C8DDA3F4B362F90A66 /* Pods-SWABLE-Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Client.release.xcconfig"; sourceTree = "<group>"; };
+		6B2198971752BC895F05A6F225C8D119 /* AnchorGroupProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnchorGroupProvider.swift; path = Source/AnchorGroupProvider.swift; sourceTree = "<group>"; };
+		6E896CF5B593EB9BAC42C557830344BB /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWABLE_Client.framework; path = "Pods-SWABLE-Client.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDD58CB179DA9608FEE8B3C4D5D8CD5 /* Anchorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Anchorage.framework; path = "Anchorage-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78010E5FDEA70FF1121C514F1058FF52 /* Pods-SWABLE-Client.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SWABLE-Client.modulemap"; sourceTree = "<group>"; };
+		84C465A6132BF689B4E499CE0201D398 /* Anchorage-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Anchorage-iOS.modulemap"; sourceTree = "<group>"; };
+		873EE0420C534AC7E22A5924FA89121C /* Anchorage-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Anchorage-iOS-dummy.m"; sourceTree = "<group>"; };
+		8C64CE2C4FA52508E6F86963CB5FBA55 /* Anchorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Anchorage.framework; path = "Anchorage-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA2E9573F8E31A8AFA12B9D2A39A1E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9355BE43AAD899148D12CBFC634F698C /* Pods-SWABLE-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWABLE-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1FC732197F28FCF64932EAC4E64AF0C /* Anchorage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Anchorage.modulemap; sourceTree = "<group>"; };
-		B0748CB2822140F916BA4EDFED27F7B6 /* Anchorage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Anchorage-umbrella.h"; sourceTree = "<group>"; };
-		B090E47A50AE51CA6509EB1BF4D36524 /* Compatability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compatability.swift; path = Source/Compatability.swift; sourceTree = "<group>"; };
-		BC4710CBEAAEDAB00A1E5CA51C50BF54 /* Pods-SWABLE-Client-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Client-resources.sh"; sourceTree = "<group>"; };
-		C2E416772499424D8F1E763A618B7E68 /* Anchorage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Anchorage.xcconfig; sourceTree = "<group>"; };
-		C3E25B89C0552653AE5A01CDA728B34F /* Pods-SWABLE-Client-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWABLE-Client-umbrella.h"; sourceTree = "<group>"; };
-		C85ED28BFCF912804DAF74C9A2345E00 /* Anchorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anchorage.swift; path = Source/Anchorage.swift; sourceTree = "<group>"; };
-		D0D8C18E7A95EADC3AAC06EBFF5C3A6F /* Pods-SWABLE-Client-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWABLE-Client-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D3F25D8F4C848552F10E9B833D84DA8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2771055BEFD26DC66EB81B0361766C0 /* Anchorage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Anchorage-prefix.pch"; sourceTree = "<group>"; };
-		F53B8CFCBBD50D2B1F0407D0EBA66329 /* Pods-SWABLE-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWABLE-Client-acknowledgements.plist"; sourceTree = "<group>"; };
-		F6790AE35577345277B673E144CD2B94 /* Pods-SWABLE-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Client-frameworks.sh"; sourceTree = "<group>"; };
+		9454F2DD60777D73A685009C621369E2 /* Pods-SWABLE-Client-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWABLE-Client-acknowledgements.plist"; sourceTree = "<group>"; };
+		9EF8B75D22B8A588854DD202D94EFF94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A261896BB042C7366ECA9D1267E5ECD0 /* Pods-SWABLE-Server-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWABLE-Server-dummy.m"; sourceTree = "<group>"; };
+		ACB80C729F2318C64F79EC982C83C902 /* Pods-SWABLE-Server-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SWABLE-Server-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B5B9DEDE2FBE359AC597ED0B884DCEB5 /* Pods-SWABLE-Server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Server.release.xcconfig"; sourceTree = "<group>"; };
+		B65027071375962762B5791674AB0AA6 /* Anchorage-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Anchorage-iOS-umbrella.h"; sourceTree = "<group>"; };
+		BF179A245B11E908326318CF8AE02AD9 /* Anchorage-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Anchorage-macOS.xcconfig"; path = "../Anchorage-macOS/Anchorage-macOS.xcconfig"; sourceTree = "<group>"; };
+		CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D04C53F7D0F883AF58EC513C5BCC8CE6 /* Pods_SWABLE_Server.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWABLE_Server.framework; path = "Pods-SWABLE-Server.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C36CD467F4F02FDF93A42E5FECAF3C /* Pods-SWABLE-Client-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWABLE-Client-umbrella.h"; sourceTree = "<group>"; };
+		D29183BF34BC594DA66DB048689B0110 /* Pods-SWABLE-Server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Server.debug.xcconfig"; sourceTree = "<group>"; };
+		D8B50BFE1ABD5A526967CBA570B7140D /* Anchorage-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Anchorage-iOS-prefix.pch"; sourceTree = "<group>"; };
+		DA3A628EABC4DE29E4E4B7B04A9D7CF7 /* Anchorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anchorage.swift; path = Source/Anchorage.swift; sourceTree = "<group>"; };
+		DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DDCED4E9937F9F9ADB604D3C284FB118 /* Pods-SWABLE-Server-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Server-frameworks.sh"; sourceTree = "<group>"; };
+		DF11DDE6D32712FABF645E4758EBDF2C /* Pods-SWABLE-Server-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Server-resources.sh"; sourceTree = "<group>"; };
+		E79A5974A918E0D59AE508958ABDB446 /* NSLayoutAnchor+MultiplierConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutAnchor+MultiplierConstraints.swift"; path = "Source/NSLayoutAnchor+MultiplierConstraints.swift"; sourceTree = "<group>"; };
+		E9290D11E2F61A9E8F49451E161971AB /* Anchorage-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Anchorage-macOS.modulemap"; path = "../Anchorage-macOS/Anchorage-macOS.modulemap"; sourceTree = "<group>"; };
+		EBB0578645FED177CCF170B3C3AF0E5B /* Pods-SWABLE-Client-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SWABLE-Client-frameworks.sh"; sourceTree = "<group>"; };
+		EFDEA27739091DF0D0DAD9604955299F /* Anchorage-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Anchorage-macOS-dummy.m"; path = "../Anchorage-macOS/Anchorage-macOS-dummy.m"; sourceTree = "<group>"; };
+		F30C7B3B37D607959E936F9C7383D04B /* Pods-SWABLE-Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWABLE-Client.debug.xcconfig"; sourceTree = "<group>"; };
+		F841C40D52892EC7D9B6EA88A9CD1399 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Anchorage-macOS/Info.plist"; sourceTree = "<group>"; };
+		FD2917190BC8464A8022A5F5020DF603 /* Pods-SWABLE-Server-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWABLE-Server-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1AAFCC10BD6F6AAC1E1B69AF51684696 /* Frameworks */ = {
+		48EB8B0542088FA6B6708348A6A81300 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387795D8794DAA2092A33E4DEC4D05FF /* Foundation.framework in Frameworks */,
+				38E8E63E8A168315D825A6ACC729C1A7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C0A8D0892092FFD7262643BD478EEE3 /* Frameworks */ = {
+		619E4AFA49285DB7BD1D0DB8FFBB7622 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA49C0621A4F06854E828A72DF2C9B58 /* Foundation.framework in Frameworks */,
+				8198790000F0245EAEA4E93CBF92D45D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D884EBD6DB5537C2931D03B871C5FD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844E2F5FB848989BE55E1588ACD4DECD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967EBA061477D7CF6572B449C28AF803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7996FA1B5ED263DC462D149DB73AEFC7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		236C48876DE1D76E068DFC69FEE89947 /* Anchorage */ = {
+		0DF524B31CEC22ED214ADC2CC3D88AE4 /* Pods-SWABLE-Client */ = {
 			isa = PBXGroup;
 			children = (
-				C85ED28BFCF912804DAF74C9A2345E00 /* Anchorage.swift */,
-				4937390B6B9CD909F5C75F5F80CE8424 /* AnchorGroupProvider.swift */,
-				B090E47A50AE51CA6509EB1BF4D36524 /* Compatability.swift */,
-				0EA578C551CFEC3F4275B79C1A35BBCB /* Internal.swift */,
-				6E8B909B9827A633D87A370A01DFAB90 /* NSLayoutAnchor+MultiplierConstraints.swift */,
-				434CFF37B7F86E417A6AEF26FB113284 /* Priority.swift */,
-				D386DA8A665041DC13E394E8667D61EB /* Support Files */,
-			);
-			name = Anchorage;
-			path = Anchorage;
-			sourceTree = "<group>";
-		};
-		35E875E47AC259A8DCD55317B62AA8C9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B0D5443609480F1E637706B212E0771 /* Anchorage.framework */,
-				51BA504BDD8AFBEBBB373F263A15339D /* Pods_SWABLE_Client.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6958DA5C4E35FB8FEF844D7857A54CA9 /* Pods-SWABLE-Client */ = {
-			isa = PBXGroup;
-			children = (
-				505BD8B60A425CF9EA636F83A28B564E /* Info.plist */,
-				6858CE05D27EE6C7143AE54E0C44AA7E /* Pods-SWABLE-Client.modulemap */,
-				D0D8C18E7A95EADC3AAC06EBFF5C3A6F /* Pods-SWABLE-Client-acknowledgements.markdown */,
-				F53B8CFCBBD50D2B1F0407D0EBA66329 /* Pods-SWABLE-Client-acknowledgements.plist */,
-				23C6DDB91A7101E5518FA3F38F105DCC /* Pods-SWABLE-Client-dummy.m */,
-				F6790AE35577345277B673E144CD2B94 /* Pods-SWABLE-Client-frameworks.sh */,
-				BC4710CBEAAEDAB00A1E5CA51C50BF54 /* Pods-SWABLE-Client-resources.sh */,
-				C3E25B89C0552653AE5A01CDA728B34F /* Pods-SWABLE-Client-umbrella.h */,
-				0BC2544F047BC0479CA74A9F98CC7F8A /* Pods-SWABLE-Client.debug.xcconfig */,
-				465D0EB2749EF4A4F3C38922155BC887 /* Pods-SWABLE-Client.release.xcconfig */,
+				9EF8B75D22B8A588854DD202D94EFF94 /* Info.plist */,
+				78010E5FDEA70FF1121C514F1058FF52 /* Pods-SWABLE-Client.modulemap */,
+				9355BE43AAD899148D12CBFC634F698C /* Pods-SWABLE-Client-acknowledgements.markdown */,
+				9454F2DD60777D73A685009C621369E2 /* Pods-SWABLE-Client-acknowledgements.plist */,
+				0DE45DEB6B44B546B072E4BE224F87A6 /* Pods-SWABLE-Client-dummy.m */,
+				EBB0578645FED177CCF170B3C3AF0E5B /* Pods-SWABLE-Client-frameworks.sh */,
+				2B4A262CE94F4592AF48CA3C3E5386D8 /* Pods-SWABLE-Client-resources.sh */,
+				D1C36CD467F4F02FDF93A42E5FECAF3C /* Pods-SWABLE-Client-umbrella.h */,
+				F30C7B3B37D607959E936F9C7383D04B /* Pods-SWABLE-Client.debug.xcconfig */,
+				61CC3EA690F821C8DDA3F4B362F90A66 /* Pods-SWABLE-Client.release.xcconfig */,
 			);
 			name = "Pods-SWABLE-Client";
 			path = "Target Support Files/Pods-SWABLE-Client";
 			sourceTree = "<group>";
 		};
+		2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */,
+				2EDFAB15A7E74F864EB353FCB5A57006 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F7D6AFE952391E4958D5FF96DF8BFCA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				236C48876DE1D76E068DFC69FEE89947 /* Anchorage */,
+				F23865774809B40BE6DD87BC79DF09FF /* Anchorage */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,106 +181,200 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */,
 				6F7D6AFE952391E4958D5FF96DF8BFCA /* Pods */,
-				35E875E47AC259A8DCD55317B62AA8C9 /* Products */,
-				F0B17AB848F7EFB0216317DAAB531EBF /* Targets Support Files */,
+				D292EE0B58D486F240C58D09BD008A33 /* Products */,
+				A49254B7A1064617CB6AC60FE5215BDF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8C918DD0468B798DBE7EEDD4C9D4170B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D386DA8A665041DC13E394E8667D61EB /* Support Files */ = {
+		A49254B7A1064617CB6AC60FE5215BDF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A1FC732197F28FCF64932EAC4E64AF0C /* Anchorage.modulemap */,
-				C2E416772499424D8F1E763A618B7E68 /* Anchorage.xcconfig */,
-				5BD25F425DD750B1E72FEC63822439E3 /* Anchorage-dummy.m */,
-				F2771055BEFD26DC66EB81B0361766C0 /* Anchorage-prefix.pch */,
-				B0748CB2822140F916BA4EDFED27F7B6 /* Anchorage-umbrella.h */,
-				D3F25D8F4C848552F10E9B833D84DA8C /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Anchorage";
-			sourceTree = "<group>";
-		};
-		F0B17AB848F7EFB0216317DAAB531EBF /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6958DA5C4E35FB8FEF844D7857A54CA9 /* Pods-SWABLE-Client */,
+				0DF524B31CEC22ED214ADC2CC3D88AE4 /* Pods-SWABLE-Client */,
+				DD1375768FCDFAD5194D38B1FC64E664 /* Pods-SWABLE-Server */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D031C66B5C3EAF94E42DCCDCB908AB1C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84C465A6132BF689B4E499CE0201D398 /* Anchorage-iOS.modulemap */,
+				3FF35E0A3CFE0BE8006C493086DC1402 /* Anchorage-iOS.xcconfig */,
+				873EE0420C534AC7E22A5924FA89121C /* Anchorage-iOS-dummy.m */,
+				D8B50BFE1ABD5A526967CBA570B7140D /* Anchorage-iOS-prefix.pch */,
+				B65027071375962762B5791674AB0AA6 /* Anchorage-iOS-umbrella.h */,
+				E9290D11E2F61A9E8F49451E161971AB /* Anchorage-macOS.modulemap */,
+				BF179A245B11E908326318CF8AE02AD9 /* Anchorage-macOS.xcconfig */,
+				EFDEA27739091DF0D0DAD9604955299F /* Anchorage-macOS-dummy.m */,
+				45A9BDF2F2EE3C220A87433FCECAC826 /* Anchorage-macOS-prefix.pch */,
+				0964CC98770C7750B35F5F379604D3BE /* Anchorage-macOS-umbrella.h */,
+				F841C40D52892EC7D9B6EA88A9CD1399 /* Info.plist */,
+				8CA2E9573F8E31A8AFA12B9D2A39A1E7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Anchorage-iOS";
+			sourceTree = "<group>";
+		};
+		D292EE0B58D486F240C58D09BD008A33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDD58CB179DA9608FEE8B3C4D5D8CD5 /* Anchorage.framework */,
+				8C64CE2C4FA52508E6F86963CB5FBA55 /* Anchorage.framework */,
+				6E896CF5B593EB9BAC42C557830344BB /* Pods_SWABLE_Client.framework */,
+				D04C53F7D0F883AF58EC513C5BCC8CE6 /* Pods_SWABLE_Server.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD1375768FCDFAD5194D38B1FC64E664 /* Pods-SWABLE-Server */ = {
+			isa = PBXGroup;
+			children = (
+				568015B0E21F05A374328DB991BCB774 /* Info.plist */,
+				17955B8345BC7508DA0DAC83FC986CC9 /* Pods-SWABLE-Server.modulemap */,
+				ACB80C729F2318C64F79EC982C83C902 /* Pods-SWABLE-Server-acknowledgements.markdown */,
+				FD2917190BC8464A8022A5F5020DF603 /* Pods-SWABLE-Server-acknowledgements.plist */,
+				A261896BB042C7366ECA9D1267E5ECD0 /* Pods-SWABLE-Server-dummy.m */,
+				DDCED4E9937F9F9ADB604D3C284FB118 /* Pods-SWABLE-Server-frameworks.sh */,
+				DF11DDE6D32712FABF645E4758EBDF2C /* Pods-SWABLE-Server-resources.sh */,
+				5DB5ABA218DCF8D392CC0036FF8D3233 /* Pods-SWABLE-Server-umbrella.h */,
+				D29183BF34BC594DA66DB048689B0110 /* Pods-SWABLE-Server.debug.xcconfig */,
+				B5B9DEDE2FBE359AC597ED0B884DCEB5 /* Pods-SWABLE-Server.release.xcconfig */,
+			);
+			name = "Pods-SWABLE-Server";
+			path = "Target Support Files/Pods-SWABLE-Server";
+			sourceTree = "<group>";
+		};
+		F23865774809B40BE6DD87BC79DF09FF /* Anchorage */ = {
+			isa = PBXGroup;
+			children = (
+				DA3A628EABC4DE29E4E4B7B04A9D7CF7 /* Anchorage.swift */,
+				6B2198971752BC895F05A6F225C8D119 /* AnchorGroupProvider.swift */,
+				28AB27A6A4AD43E3D99D2416C39FDD31 /* Compatability.swift */,
+				28F7D9F67CE6A18D68741A8901C2C3B4 /* Internal.swift */,
+				E79A5974A918E0D59AE508958ABDB446 /* NSLayoutAnchor+MultiplierConstraints.swift */,
+				4396C5B28893D1E9417B1FA814D780EC /* Priority.swift */,
+				D031C66B5C3EAF94E42DCCDCB908AB1C /* Support Files */,
+			);
+			name = Anchorage;
+			path = Anchorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1A3A027CEC43D5CCC184E26CCDB27ED6 /* Headers */ = {
+		4582B42173517C6744DF03AAA963291F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36B75922D81D9E68B269B7F50C227C0B /* Anchorage-umbrella.h in Headers */,
+				BBC0A626EFD4D7F10D11A48090B6E082 /* Anchorage-macOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7EE114EFC83F5998438227A464FBC17 /* Headers */ = {
+		5A8245F401B87434094A202ECE466A98 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF63048551D8B3FB06A52A7692FC869 /* Pods-SWABLE-Client-umbrella.h in Headers */,
+				1BAA30DE2CD45BBFE106C5098E6827CE /* Pods-SWABLE-Server-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D66EEBA9C7A91908E325AAF9C9807409 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2814929E113107DECCE2C25FCDCD6B5C /* Anchorage-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF643EE86DE09D93D587440DC0F069CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F77F714048234C5633FFB83D057164 /* Pods-SWABLE-Client-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DB0424A694AAC04C38C61FFC4A2FB9C9 /* Pods-SWABLE-Client */ = {
+		30FF5F27D02C8B9AEFA06291F70F71F9 /* Anchorage-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D157C8749042134F671DE8ACC38CDA53 /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Client" */;
+			buildConfigurationList = 784AB68F556942E6891D98A35AFB6BA5 /* Build configuration list for PBXNativeTarget "Anchorage-macOS" */;
 			buildPhases = (
-				DCFFE45DA7D034D9191CBE3739964D3F /* Sources */,
-				1AAFCC10BD6F6AAC1E1B69AF51684696 /* Frameworks */,
-				D7EE114EFC83F5998438227A464FBC17 /* Headers */,
+				2552938E29E2EAC10298E82E57C82405 /* Sources */,
+				48EB8B0542088FA6B6708348A6A81300 /* Frameworks */,
+				4582B42173517C6744DF03AAA963291F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E5AC9F2708E83C907E89F96C1862FE0 /* PBXTargetDependency */,
+			);
+			name = "Anchorage-macOS";
+			productName = "Anchorage-macOS";
+			productReference = 8C64CE2C4FA52508E6F86963CB5FBA55 /* Anchorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		84C36EEC6931CC0E0C0A3E06574E01C1 /* Pods-SWABLE-Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3F1B932FA9BB67F6F16ECB48D7E5E5E /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Client" */;
+			buildPhases = (
+				BE987C7A7E9A908B99A748BD50ED2CB6 /* Sources */,
+				619E4AFA49285DB7BD1D0DB8FFBB7622 /* Frameworks */,
+				DF643EE86DE09D93D587440DC0F069CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9A20A125E6D9F4CAD544ABDFBCFB7FF /* PBXTargetDependency */,
 			);
 			name = "Pods-SWABLE-Client";
 			productName = "Pods-SWABLE-Client";
-			productReference = 51BA504BDD8AFBEBBB373F263A15339D /* Pods_SWABLE_Client.framework */;
+			productReference = 6E896CF5B593EB9BAC42C557830344BB /* Pods_SWABLE_Client.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EDFADDD27E9AE133283F4BFCC355134F /* Anchorage */ = {
+		EB6C6FFBAE0A1494CDE5B15E7FB66874 /* Anchorage-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3AEFB60A0EB7CDB15D559D88705B519 /* Build configuration list for PBXNativeTarget "Anchorage" */;
+			buildConfigurationList = DF035664298CC5D17621493F43D69619 /* Build configuration list for PBXNativeTarget "Anchorage-iOS" */;
 			buildPhases = (
-				6BA801A9D0E51F7388F26373D5ACF6FA /* Sources */,
-				4C0A8D0892092FFD7262643BD478EEE3 /* Frameworks */,
-				1A3A027CEC43D5CCC184E26CCDB27ED6 /* Headers */,
+				4310A5AAF1B757A844FC367FCC981B59 /* Sources */,
+				967EBA061477D7CF6572B449C28AF803 /* Frameworks */,
+				D66EEBA9C7A91908E325AAF9C9807409 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Anchorage;
-			productName = Anchorage;
-			productReference = 1B0D5443609480F1E637706B212E0771 /* Anchorage.framework */;
+			name = "Anchorage-iOS";
+			productName = "Anchorage-iOS";
+			productReference = 6EDD58CB179DA9608FEE8B3C4D5D8CD5 /* Anchorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F40C17263465BD4B872433CABFFD5190 /* Pods-SWABLE-Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E36BAA1BD6F5D057D348D6DFF5F8FA2 /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Server" */;
+			buildPhases = (
+				D5E8ACC5412285C359B119BCD22AA016 /* Sources */,
+				6D884EBD6DB5537C2931D03B871C5FD6 /* Frameworks */,
+				5A8245F401B87434094A202ECE466A98 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B68F3EEF4BE143B5FB3A8BB05C908730 /* PBXTargetDependency */,
+			);
+			name = "Pods-SWABLE-Server";
+			productName = "Pods-SWABLE-Server";
+			productReference = D04C53F7D0F883AF58EC513C5BCC8CE6 /* Pods_SWABLE_Server.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -253,54 +394,84 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 35E875E47AC259A8DCD55317B62AA8C9 /* Products */;
+			productRefGroup = D292EE0B58D486F240C58D09BD008A33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDFADDD27E9AE133283F4BFCC355134F /* Anchorage */,
-				DB0424A694AAC04C38C61FFC4A2FB9C9 /* Pods-SWABLE-Client */,
+				EB6C6FFBAE0A1494CDE5B15E7FB66874 /* Anchorage-iOS */,
+				30FF5F27D02C8B9AEFA06291F70F71F9 /* Anchorage-macOS */,
+				84C36EEC6931CC0E0C0A3E06574E01C1 /* Pods-SWABLE-Client */,
+				F40C17263465BD4B872433CABFFD5190 /* Pods-SWABLE-Server */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6BA801A9D0E51F7388F26373D5ACF6FA /* Sources */ = {
+		2552938E29E2EAC10298E82E57C82405 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				068E1D81BF6F2EB48E06E1E5988FE8D5 /* Anchorage-dummy.m in Sources */,
-				6929A18231635B7AC9E1C64F2C6A9729 /* Anchorage.swift in Sources */,
-				101784DB4E9011A49B3ECBD44999A3AB /* AnchorGroupProvider.swift in Sources */,
-				6D1B90FADCEC885E68A1AF6B4C241740 /* Compatability.swift in Sources */,
-				E0A8B2C60396294C63C89C4DE1C7C3C2 /* Internal.swift in Sources */,
-				2510A66801F2937A4FA56225D6A50FDB /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */,
-				AF440B73367770EAB117472F6C328A23 /* Priority.swift in Sources */,
+				D7726702F7FF6E0BB09FDFF2EF16E71F /* Anchorage-macOS-dummy.m in Sources */,
+				954338A2CEB112F8495E4F2099E104AC /* Anchorage.swift in Sources */,
+				0DB20CF70F4DB5A3A53FBC00A6CBAFA7 /* AnchorGroupProvider.swift in Sources */,
+				0F29EA4B5BB7ADC10C1764C69FDFAA07 /* Compatability.swift in Sources */,
+				B81EBA96B940BF73D0AFD50FDFA6694B /* Internal.swift in Sources */,
+				30D45742B76CC75F15E140F78A91FF3F /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */,
+				EC05A37635C04B3C6143DF57F6FD538B /* Priority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCFFE45DA7D034D9191CBE3739964D3F /* Sources */ = {
+		4310A5AAF1B757A844FC367FCC981B59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8AA17A9219EADABC2AF021444CEC4B6 /* Pods-SWABLE-Client-dummy.m in Sources */,
+				BC654A4F9B68234AF3E6DC4247EC961F /* Anchorage-iOS-dummy.m in Sources */,
+				BCEEB9150DA7B58B1F5C698C754E10F8 /* Anchorage.swift in Sources */,
+				7CCE81953DF8C568C88170036D621A0E /* AnchorGroupProvider.swift in Sources */,
+				CD482E3EA576C580B4B67FA871673164 /* Compatability.swift in Sources */,
+				9655C030B6BED5DCF3CDD1253D99BC41 /* Internal.swift in Sources */,
+				74A6826C9DB1C93A32F136420E596910 /* NSLayoutAnchor+MultiplierConstraints.swift in Sources */,
+				B626D42C54FF1E18BAA392C539120E2F /* Priority.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE987C7A7E9A908B99A748BD50ED2CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6DEC05EB7185021001C259BB9D2B051 /* Pods-SWABLE-Client-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E8ACC5412285C359B119BCD22AA016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1AD1F1D052F7C59B27E81CCD3835B4 /* Pods-SWABLE-Server-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6E5AC9F2708E83C907E89F96C1862FE0 /* PBXTargetDependency */ = {
+		B68F3EEF4BE143B5FB3A8BB05C908730 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Anchorage;
-			target = EDFADDD27E9AE133283F4BFCC355134F /* Anchorage */;
-			targetProxy = 2199252DC2B23079384478B40C9855F3 /* PBXContainerItemProxy */;
+			name = "Anchorage-macOS";
+			target = 30FF5F27D02C8B9AEFA06291F70F71F9 /* Anchorage-macOS */;
+			targetProxy = 0F1FACBF90CB3A0AE3016DCF1BD32825 /* PBXContainerItemProxy */;
+		};
+		B9A20A125E6D9F4CAD544ABDFBCFB7FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Anchorage-iOS";
+			target = EB6C6FFBAE0A1494CDE5B15E7FB66874 /* Anchorage-iOS */;
+			targetProxy = E628F61589D0A7DA61D52E57769C36F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05026236123C1B3AA133E345FDCEB53A /* Release */ = {
+		114F4CBDF842006F2169D002593C02D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2E416772499424D8F1E763A618B7E68 /* Anchorage.xcconfig */;
+			baseConfigurationReference = 3FF35E0A3CFE0BE8006C493086DC1402 /* Anchorage-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -311,18 +482,86 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Anchorage/Anchorage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Anchorage/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Anchorage-iOS/Anchorage-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Anchorage-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Anchorage/Anchorage.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Anchorage-iOS/Anchorage-iOS.modulemap";
 				PRODUCT_NAME = Anchorage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37783F8CFB54C27B1E8E25C29B85A3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29183BF34BC594DA66DB048689B0110 /* Pods-SWABLE-Server.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SWABLE-Server/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SWABLE_Server;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		392F8145B47736AFCB8D523EFFC7381A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61CC3EA690F821C8DDA3F4B362F90A66 /* Pods-SWABLE-Client.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SWABLE-Client/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SWABLE_Client;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -330,62 +569,7 @@
 			};
 			name = Release;
 		};
-		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
+		817E25744DFABD643818B3DF90FBCCAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -435,6 +619,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,9 +630,107 @@
 			};
 			name = Debug;
 		};
-		8852C91255B2BF52B4230C9DA8CF1CBC /* Debug */ = {
+		AC0D5C6A2120490918DB4498BC85A9B5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BC2544F047BC0479CA74A9F98CC7F8A /* Pods-SWABLE-Client.debug.xcconfig */;
+			baseConfigurationReference = BF179A245B11E908326318CF8AE02AD9 /* Anchorage-macOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Anchorage-macOS/Anchorage-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Anchorage-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Anchorage-macOS/Anchorage-macOS.modulemap";
+				PRODUCT_NAME = Anchorage;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C76522D47EFF06505915A01CD8F48907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF35E0A3CFE0BE8006C493086DC1402 /* Anchorage-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Anchorage-iOS/Anchorage-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Anchorage-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Anchorage-iOS/Anchorage-iOS.modulemap";
+				PRODUCT_NAME = Anchorage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D26F176047D6D93CEB42C4C23F0A2260 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B9DEDE2FBE359AC597ED0B884DCEB5 /* Pods-SWABLE-Server.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-SWABLE-Server/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SWABLE_Server;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD36EC6EEDC9A74CC10E6723CBF7C3A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30C7B3B37D607959E936F9C7383D04B /* Pods-SWABLE-Client.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -479,70 +762,93 @@
 			};
 			name = Debug;
 		};
-		B3D7583577B0A36CC36E67FF90A3ECAE /* Debug */ = {
+		EF307F29780027811F19105CDF7AFDF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2E416772499424D8F1E763A618B7E68 /* Anchorage.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F7A53F0E48178135AAF5556257511DB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF179A245B11E908326318CF8AE02AD9 /* Anchorage-macOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Anchorage/Anchorage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Anchorage/Info.plist";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Anchorage-macOS/Anchorage-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Anchorage-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Anchorage/Anchorage.modulemap";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Anchorage-macOS/Anchorage-macOS.modulemap";
 				PRODUCT_NAME = Anchorage;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		F20BFADE1B1433A5B9DB95C639F01123 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 465D0EB2749EF4A4F3C38922155BC887 /* Pods-SWABLE-Client.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SWABLE-Client/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SWABLE_Client;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -550,26 +856,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59F0302F2371FCC6B73EF0A418D40734 /* Debug */,
-				12C4B864767C59600DBFA238F1E2F8BC /* Release */,
+				817E25744DFABD643818B3DF90FBCCAA /* Debug */,
+				EF307F29780027811F19105CDF7AFDF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3AEFB60A0EB7CDB15D559D88705B519 /* Build configuration list for PBXNativeTarget "Anchorage" */ = {
+		2E36BAA1BD6F5D057D348D6DFF5F8FA2 /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Server" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B3D7583577B0A36CC36E67FF90A3ECAE /* Debug */,
-				05026236123C1B3AA133E345FDCEB53A /* Release */,
+				37783F8CFB54C27B1E8E25C29B85A3BA /* Debug */,
+				D26F176047D6D93CEB42C4C23F0A2260 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D157C8749042134F671DE8ACC38CDA53 /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Client" */ = {
+		784AB68F556942E6891D98A35AFB6BA5 /* Build configuration list for PBXNativeTarget "Anchorage-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8852C91255B2BF52B4230C9DA8CF1CBC /* Debug */,
-				F20BFADE1B1433A5B9DB95C639F01123 /* Release */,
+				F7A53F0E48178135AAF5556257511DB8 /* Debug */,
+				AC0D5C6A2120490918DB4498BC85A9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF035664298CC5D17621493F43D69619 /* Build configuration list for PBXNativeTarget "Anchorage-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				114F4CBDF842006F2169D002593C02D5 /* Debug */,
+				C76522D47EFF06505915A01CD8F48907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3F1B932FA9BB67F6F16ECB48D7E5E5E /* Build configuration list for PBXNativeTarget "Pods-SWABLE-Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD36EC6EEDC9A74CC10E6723CBF7C3A4 /* Debug */,
+				392F8145B47736AFCB8D523EFFC7381A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

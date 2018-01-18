@@ -14,9 +14,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
     private let beacon = Beacon()
+    private let scanner = PeripheralScanner()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        window.contentViewController = LogViewController()
+
         beacon.startAdvertising()
+        scanner.scanContinuously(interval: 2)
     }
 
 }

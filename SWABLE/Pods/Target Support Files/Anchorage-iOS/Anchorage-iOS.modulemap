@@ -1,5 +1,5 @@
 framework module Anchorage {
-  umbrella header "Anchorage-umbrella.h"
+  umbrella header "Anchorage-iOS-umbrella.h"
 
   export *
   module * { export * }

@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  SWABLE-Server
+//  SWABLE
 //
 //  Created by Rob Visentin on 1/17/18.
 //  Copyright © 2018 Raizlabs. All rights reserved.
