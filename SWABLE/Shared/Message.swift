@@ -14,40 +14,75 @@
     private typealias Font = UIFont
 #endif
 
-public struct Message {
+struct Message: CustomStringConvertible {
 
     public static let notificationName = Notification.Name(rawValue: "com.raizlabs.swable.message")
-    public static let textKey = "com.raizlabs.swable.message"
-    public static let attributedTextKey = "com.raizlabs.swable.attributedMessage"
+    public static let objectKey = "com.raizlabs.swable.messageObject"
+    
+    var text: String
+    var date: Date
+    var file: String
+    var line: Int
+    var function: String
+    
+    private init(text: String, date: Date, file: String, line: Int, function: String) {
+        self.text = text
+        self.date = date
+        self.file = file
+        self.line = line
+        self.function = function
+    }
+    
+    var description: String {
+        let formattedDate = Message.dateFormatter.string(from: self.date)
+        var finalString = "[\(formattedDate)] \(self.file) \(self.function)"
+        
+        if !text.isEmpty {
+            finalString += ": \(self.text)"
+        }
+        
+        return finalString
+    }
+    
+    var attributedDescription: NSAttributedString {
+        let formattedDate = Message.dateFormatter.string(from: self.date)
+        
+        let desc = self.description
+        
+        let attributedText = NSMutableAttributedString(string: desc, attributes: [
+            .font: Font.systemFont(ofSize: 12)
+            ])
+        attributedText.addAttributes([
+            //.font: Font.boldSystemFont(ofSize: 12)
+            .font: Font.monospacedDigitSystemFont(ofSize: 12, weight: .bold)
+            ], range: (desc as NSString).range(of: formattedDate))
+
+        
+        return attributedText
+    }
 
     private static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss.SSS"
         return formatter
     }()
-
-    public static func post(_ messages: Any..., file: String = #file, _ function: String = #function) {
-        let timestamp = "[\(Message.dateFormatter.string(from: Date()))]"
+    
+    public static func post(_ messages: Any..., file: String = #file, _ function: String = #function, _ line: Int = #line) {
+        let date = Date()
+        let fileName = file.components(separatedBy: "/").last ?? ""
+        let timestamp = "[\(Message.dateFormatter.string(from: date))]"
         let messageText = messages.map(String.init(describing:)).joined(separator: " ")
-        var text = "\(timestamp) \(file.components(separatedBy: "/").last ?? "") \(function)"
-
+        var text = "\(timestamp) \(fileName) \(function)"
+        
         if !messageText.isEmpty {
             text += ": \(messageText)"
         }
-
-        let attributedText = NSMutableAttributedString(string: text, attributes: [
-            .font: Font.systemFont(ofSize: 12)
-        ])
-        attributedText.addAttributes([
-            .font: Font.boldSystemFont(ofSize: 12)
-        ], range: (text as NSString).range(of: timestamp))
-
-        print(text)
-
-        NotificationCenter.default.post(name: Message.notificationName, object: nil, userInfo: [
-            Message.textKey: text,
-            Message.attributedTextKey: attributedText,
-        ])
+        
+        let message = Message(text: messageText, date: date, file: fileName, line: line, function: function)
+        
+        NotificationCenter.default.post(name: Message.notificationName, object: nil, userInfo: [ Message.objectKey: message ])
     }
+    
+    
 
 }
