@@ -22,7 +22,7 @@ class MessageLog {
     
     /// Gives all the stored messages together as a string.
     func getFullText() -> String {
-        let lines = messages.map {
+        return messages.map {
             return $0.description
         }.joined(separator: "\n")
     }
