@@ -69,7 +69,10 @@ final class LogViewController: ViewController {
         #if os(OSX)
             textView.textStorage?.append(NSMutableAttributedString(string: "\n"))
             textView.textStorage?.append(attributedText)
-            textView.scrollRangeToVisible(NSRange(location: textView.textStorage?.length ?? 0, length: 0))
+
+            if textView.visibleRect.minY >= textView.bounds.height - textView.visibleRect.height {
+                textView.scrollRangeToVisible(NSRange(location: textView.textStorage?.length ?? 0, length: 0))
+            }
         #else
             let text = textView.attributedText.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString()
             text.append(NSMutableAttributedString(string: "\n"))

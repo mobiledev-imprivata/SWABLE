@@ -24,7 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         scanner.delegate = self
 
         beacon.startAdvertising()
-        scanner.startScanning()
     }
 
 }
@@ -33,6 +32,11 @@ extension AppDelegate: BeaconDelegate {
 
     func beaconDidStartAdvertising(_ beacon: Beacon) {
         Message.post()
+
+        // Give peripheral some time to start advertising if it was woken up
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.scanner.startScanning()
+        }
     }
 
     func beaconDidStopAdvertising(_ beacon: Beacon) {
@@ -52,7 +56,7 @@ extension AppDelegate: PeripheralScannerDelegate {
     }
 
     func peripheralScanner(_ scanner: PeripheralScanner, discovered peripheral: String, rssi: Int) {
-        Message.post(peripheral, "RSSI: \(rssi)")
+        Message.post(peripheral, rssi)
     }
 
 }

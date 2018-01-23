@@ -76,6 +76,18 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Edit" id="1Yi-5i-9L2">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="m2k-Ed-0Mg">
+                        <items>
+                            <menuItem title="Copy" keyEquivalent="c" id="Ajq-5J-WCh">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="WKw-2Q-gcf"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Window" id="aUF-d1-5bR">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
