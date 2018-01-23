@@ -5,10 +5,17 @@ pod 'Anchorage', '~> 4.0'
 target 'SWABLE-Client' do
   platform :ios, '11.0'
 
+  pod 'CryptoSwift'
+  pod 'Alamofire', '~> 4.5'
+
 end
 
 target 'SWABLE-Server' do
   platform :osx, '10.13'
+
+  pod 'CryptoSwift'
+  pod 'Alamofire', '~> 4.5'
+
 end
 
 target 'Parasite' do

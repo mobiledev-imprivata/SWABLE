@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09121DEB20163AA300AA5AF5 /* S3FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09121DEA20163AA300AA5AF5 /* S3FileManager.swift */; };
+		09121DEC20163AA300AA5AF5 /* S3FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09121DEA20163AA300AA5AF5 /* S3FileManager.swift */; };
 		09622FFE20113FD70049392D /* SystemInfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09622FFC20113FD70049392D /* SystemInfoTextView.swift */; };
 		09623009201140B50049392D /* RZIOKit.c in Sources */ = {isa = PBXBuildFile; fileRef = 09623001201140B50049392D /* RZIOKit.c */; };
 		0962300A201140B50049392D /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09623004201140B50049392D /* Process.swift */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0077D2F90318A30D18B5EF58 /* Pods_SWABLE_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWABLE_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09121DEA20163AA300AA5AF5 /* S3FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3FileManager.swift; sourceTree = "<group>"; };
 		09622FFC20113FD70049392D /* SystemInfoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemInfoTextView.swift; sourceTree = "<group>"; };
 		09622FFD20113FD70049392D /* Parasite-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Parasite-Bridging-Header.h"; sourceTree = "<group>"; };
 		09623001201140B50049392D /* RZIOKit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RZIOKit.c; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 				D4320F21200FA0EC00BF69C2 /* Message.swift */,
 				D4320F34200FF68E00BF69C2 /* LogViewController.swift */,
 				096230152011466D0049392D /* MessageLog.swift */,
+				09121DEA20163AA300AA5AF5 /* S3FileManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -418,11 +422,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Client/Pods-SWABLE-Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Anchorage-iOS/Anchorage.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,11 +525,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWABLE-Server/Pods-SWABLE-Server-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Anchorage-macOS/Anchorage.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -569,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4320F35200FF68E00BF69C2 /* LogViewController.swift in Sources */,
+				09121DEC20163AA300AA5AF5 /* S3FileManager.swift in Sources */,
 				096230172011466D0049392D /* MessageLog.swift in Sources */,
 				D4320F14200E9CFF00BF69C2 /* AppDelegate.swift in Sources */,
 				D4320F24200FA1DB00BF69C2 /* Message.swift in Sources */,
@@ -583,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4320F2B200FC37A00BF69C2 /* Peripheral.swift in Sources */,
+				09121DEB20163AA300AA5AF5 /* S3FileManager.swift in Sources */,
 				096230162011466D0049392D /* MessageLog.swift in Sources */,
 				D4320F20200FA07E00BF69C2 /* BeaconMonitor.swift in Sources */,
 				D45274FA200E9BBB000035B0 /* AppDelegate.swift in Sources */,

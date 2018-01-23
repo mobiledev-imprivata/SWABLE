@@ -46,6 +46,8 @@ final class LogViewController: ViewController {
         textView.isEditable = false
 
         NotificationCenter.default.addObserver(self, selector: #selector(onReceiveMessage), name: Message.notificationName, object: nil)
+        
+        log.upload()
     }
 
     @IBAction func clear(_ sender: Any) {

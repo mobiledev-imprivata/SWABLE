@@ -14,6 +14,7 @@ import Foundation
 class MessageLog {
     
     var messages: [Message] = []
+    var s3FileManager = S3FileManager()
     
     /// Adds a new message to the log.
     func add(_ message: Message) {
@@ -35,6 +36,8 @@ extension MessageLog {
     // Uploads all messages in the log as text to some service. Not sure which one yet.
     func upload() {
         let fullText = getFullText()
+        print("Uploading text: \n\(fullText)")
+        s3FileManager.upload(text: fullText)
     }
 
 }

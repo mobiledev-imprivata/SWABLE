@@ -102,10 +102,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Anchorage-macOS/Anchorage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Anchorage-macOS/Anchorage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
