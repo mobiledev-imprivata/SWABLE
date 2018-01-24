@@ -18,7 +18,7 @@ import Anchorage
 
 final class LogViewController: ViewController {
 
-    private let textView = TextView(frame: CGRect(x: 0, y: 0, width: 640, height: 480))
+    private let textView = TextView(frame: CGRect(x: 0, y: 0, width: 800, height: 500))
 
     override func loadView() {
         #if os(OSX)
@@ -27,8 +27,10 @@ final class LogViewController: ViewController {
             textView.minSize = textView.frame.size
             textView.maxSize = NSSize(width: .max, height: .max)
             textView.textContainerInset = NSSize(width: 5, height: 10)
+            textView.autoresizingMask = .width
 
             let scrollView = NSScrollView(frame: textView.frame)
+            scrollView.hasVerticalScroller = true
             scrollView.documentView = textView
 
             view = scrollView
@@ -45,6 +47,14 @@ final class LogViewController: ViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(display), name: Message.notificationName, object: nil)
     }
 
+    @IBAction func clear(_ sender: Any) {
+        #if os(OSX)
+            textView.textStorage?.setAttributedString(NSAttributedString())
+        #else
+            textView.attributedText = nil
+        #endif
+    }
+
     @objc private func display(notification: Notification) {
         guard let message = notification.userInfo?[Message.attributedTextKey] as? NSAttributedString else {
             return
@@ -59,7 +69,10 @@ final class LogViewController: ViewController {
         #if os(OSX)
             textView.textStorage?.append(NSMutableAttributedString(string: "\n"))
             textView.textStorage?.append(attributedText)
-            textView.scrollRangeToVisible(NSRange(location: textView.textStorage?.length ?? 0, length: 0))
+
+            if textView.visibleRect.minY >= textView.bounds.height - textView.visibleRect.height {
+                textView.scrollRangeToVisible(NSRange(location: textView.textStorage?.length ?? 0, length: 0))
+            }
         #else
             let text = textView.attributedText.mutableCopy() as? NSMutableAttributedString ?? NSMutableAttributedString()
             text.append(NSMutableAttributedString(string: "\n"))
