@@ -13,9 +13,12 @@ protocol PeripheralScannerDelegate: class {
     func peripheralScannerDidStopScanning(_ scanner: PeripheralScanner)
 
     func peripheralScanner(_ scanner: PeripheralScanner, discovered peripheral: String, rssi: Int)
+    func peripheralScanner(_ scanner: PeripheralScanner, lost peripheral: String)
 }
 
 final class PeripheralScanner: NSObject {
+
+    fileprivate(set) var isScanning = false
 
     weak var delegate: PeripheralScannerDelegate?
 
@@ -27,8 +30,6 @@ final class PeripheralScanner: NSObject {
     private var discoveredPeripheral: CBPeripheral?
 
     private var advertisements = [PeripheralAdvertisement]()
-
-    private var deferredWork: (() -> Void)?
 
     private weak var scanTimer: Timer?
     private weak var keepAliveTimer: Timer?
@@ -43,36 +44,34 @@ final class PeripheralScanner: NSObject {
     }
 
     func startScanning() {
-        Message.post()
-
-        guard !centralManager.isScanning else {
+        guard !isScanning else {
             return
         }
 
-        switch centralManager.state {
-        case .poweredOn:
+        Message.post()
+
+        isScanning = true
+
+        if centralManager.state == .poweredOn {
             startScanning(window: scanWindow)
             delegate?.peripheralScannerDidStartScanning(self)
-
-        case .unknown:
-            deferredWork = startScanning
-
-        default:
-            Message.post("Scan failed because bluetooth is unvailable!")
         }
     }
 
     func stopScanning() {
+        guard isScanning else {
+            return
+        }
+
         Message.post()
+
+        centralManager.stopScan()
 
         scanTimer?.invalidate()
         keepAliveTimer?.invalidate()
 
-        guard centralManager.isScanning else {
-            return
-        }
+        isScanning = false
 
-        centralManager.stopScan()
         delegate?.peripheralScannerDidStopScanning(self)
     }
 
@@ -83,11 +82,14 @@ extension PeripheralScanner: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         Message.post(central.state)
 
-        if central.state == .poweredOn {
-            deferredWork?()
+        if central.state == .poweredOn && isScanning {
+            startScanning(window: scanWindow)
+            delegate?.peripheralScannerDidStartScanning(self)
         }
-
-        deferredWork = nil
+        else if central.state == .poweredOff {
+            scanTimer?.invalidate()
+            keepAliveTimer?.invalidate()
+        }
     }
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
@@ -120,9 +122,7 @@ extension PeripheralScanner: CBCentralManagerDelegate {
         NSObject.cancelPreviousPerformRequests(withTarget: self)
 
         peripheral.delegate = self
-        peripheral.discoverServices([
-            serviceUUID,
-        ])
+        peripheral.discoverServices(nil)
     }
 
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
@@ -134,6 +134,8 @@ extension PeripheralScanner: CBCentralManagerDelegate {
         if peripheral.identifier == discoveredPeripheral?.identifier {
             discoveredPeripheral = nil
             keepAliveTimer?.invalidate()
+
+            delegate?.peripheralScanner(self, lost: peripheral.identifier.uuidString)
         }
 
         // Can finally release reference to the pending peripheral
@@ -147,6 +149,7 @@ extension PeripheralScanner: CBCentralManagerDelegate {
 extension PeripheralScanner: CBPeripheralDelegate {
 
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        Message.post(peripheral.services ?? [])
         if let services = peripheral.services, let serviceIndex = services.index(where: { $0.uuid == serviceUUID }) {
             Message.post("Found matching service")
 
@@ -170,9 +173,7 @@ extension PeripheralScanner: CBPeripheralDelegate {
         Message.post(peripheral.identifier.uuidString)
 
         // Rediscover services
-        peripheral.discoverServices([
-            serviceUUID,
-        ])
+        peripheral.discoverServices(nil)
     }
 
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
@@ -206,7 +207,6 @@ extension PeripheralScanner: CBPeripheralDelegate {
 private extension PeripheralScanner {
 
     func startScanning(window: TimeInterval) {
-        assert(!centralManager.isScanning)
         assert(window > 0)
 
         Message.post(window)

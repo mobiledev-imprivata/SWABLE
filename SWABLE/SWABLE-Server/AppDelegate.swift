@@ -57,6 +57,12 @@ extension AppDelegate: PeripheralScannerDelegate {
 
     func peripheralScanner(_ scanner: PeripheralScanner, discovered peripheral: String, rssi: Int) {
         Message.post(peripheral, rssi)
+        beacon.stopAdvertising()
+    }
+
+    func peripheralScanner(_ scanner: PeripheralScanner, lost peripheral: String) {
+        Message.post(peripheral)
+        beacon.startAdvertising()
     }
 
 }

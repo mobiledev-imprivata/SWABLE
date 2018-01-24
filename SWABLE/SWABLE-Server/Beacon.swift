@@ -21,11 +21,11 @@ final class Beacon: NSObject {
     private var peripheralManager: CBPeripheralManager?
 
     func startAdvertising() {
-        Message.post()
-
         guard peripheralManager == nil else {
             return
         }
+
+        Message.post()
 
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [
             CBPeripheralManagerOptionShowPowerAlertKey: true
@@ -33,11 +33,11 @@ final class Beacon: NSObject {
     }
 
     func stopAdvertising() {
-        Message.post()
-
         guard let peripheralManager = peripheralManager else {
             return
         }
+
+        Message.post()
 
         peripheralManager.stopAdvertising()
         self.peripheralManager = nil

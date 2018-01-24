@@ -69,6 +69,9 @@ extension Peripheral: CBPeripheralManagerDelegate {
             peripheral.removeAllServices()
             peripheral.add(service)
         }
+        else if peripheral.state == .poweredOff {
+            stopAdvertising()
+        }
     }
 
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
