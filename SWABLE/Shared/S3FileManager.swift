@@ -6,32 +6,51 @@
 //  Copyright © 2018 Raizlabs. All rights reserved.
 //
 
-/*
- Manages the process of uploading and downloading from an S3 bucket.
- */
-import Foundation
 import CryptoSwift
 import Alamofire
 
-class S3FileManager {
-    
+/*
+ Manages the process of uploading and downloading from an S3 bucket.
+ */
+final class S3FileManager {
+
     enum S3Error: Error {
-        case RuntimeError(String)
+        case invalidDataFormat
+        case signingFailed
+    }
+
+    struct Credentials {
+        var accessKey: String
+        var secret: String
+    }
+
+    struct Bucket {
+        var name: String
+        var region: String
+
+        init(name: String, region: String = "us-east-1") {
+            self.name = name
+            self.region = region
+        }
+    }
+
+    var credentials: Credentials
+
+    init(credentials: Credentials) {
+        self.credentials = credentials
     }
     
-    // Configuration for specific bucket
-    private let bucketURL: String = "imprivata.raizlabs.xyz.s3.amazonaws.com"
-    private let awsAccessKeyId: String = "AKIAJBGXVGYB3OGWCQFA"
-    private let awsSecretAccessKey: String = "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"
-    private let region = "us-east-1"
-    private let service = "s3"
-    
-    func upload(text: String) {
+    func upload(text: String, to bucket: Bucket, completion: ((Error?) -> Void)? = nil) {
+        guard let data = text.data(using: .utf8) else {
+            completion?(S3Error.invalidDataFormat)
+            return
+        }
+
         let signDate = Date()
-        let data = "Wow".data(using: .utf8)!
+        let file = "\(S3FileManager.filenameFormatter.string(from: signDate)).txt"
         
         var headers: HTTPHeaders = [
-            "Host": bucketURL,
+            "Host": bucket.host,
         ]
 
         headers.amzTimestamp = S3FileManager.amazonDateFormatter.string(from: signDate)
@@ -43,41 +62,67 @@ class S3FileManager {
             }
         }
 
-        headers["Authorization"] = try? authorization(for: headers)
+        do {
+            headers["Authorization"] = try authorization(for: file, in: bucket, headers: headers)
 
-        Alamofire.upload(data, to: "http://\(bucketURL)/test.txt", method: .put, headers: headers).responseString { (response) in
-            switch response.result {
-            case .success(let value):
-                print(value)
-                break
-            case .failure(let error):
-                print("Error: \(error.localizedDescription)")
-                print("Header: \(headers)")
-                print("Response: \(response)")
-                break
+            var url = URLComponents()
+            url.scheme = "https"
+            url.host = bucket.host
+            url.path = "/\(bucket.name)/\(file)"
+
+            Alamofire.upload(data, to: url, method: .put, headers: headers).validate(statusCode: 100..<400).responseData { response in
+                switch response.result {
+                case .success:
+                    completion?(nil)
+                case .failure(let error):
+                    completion?(error)
+                }
             }
         }
-    }
-    
-    /// Value for the Authorization header in any requests this class makes to an S3 bucket.
-    func authorization(for headers: HTTPHeaders) throws -> String {
-        guard let signature = try? sign(headers) else {
-            throw S3Error.RuntimeError("Could not create S3 signature!")
+        catch {
+            completion?(S3Error.signingFailed)
         }
+    }
 
+}
+
+// MARK: - Private
+
+private extension S3FileManager {
+
+    /// Formats dates as ISO 8601 strings, for use with Amazon S3.
+    static var amazonDateFormatter: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions.remove(.withColonSeparatorInTime)
+        formatter.formatOptions.remove(.withDashSeparatorInDate)
+        return formatter
+    }()
+
+    static var filenameFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy HH:mm"
+        return formatter
+    }()
+
+    /// Value for the Authorization header in any requests this class makes to an S3 bucket.
+    /// See: https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html
+    func authorization(for resource: String, in bucket: Bucket, headers: HTTPHeaders) throws -> String {
+        let signature = try sign(resource: resource, in: bucket, headers: headers)
         let headerKeys = headers.amzSorted.map { $0.key.lowercased() }.joined(separator: ";")
 
-        return "AWS4-HMAC-SHA256 Credential=\(awsAccessKeyId)/\(headers.amzYMD)/\(region)/\(service)/aws4_request,SignedHeaders=\(headerKeys),Signature=\(signature)"
+        return "AWS4-HMAC-SHA256 Credential=\(credentials.accessKey)/\(headers.amzYMD)/\(bucket.region)/s3/aws4_request,SignedHeaders=\(headerKeys),Signature=\(signature)"
     }
-    
-    /*
-     Creates the string for the Signature field of the Authorization header required for privileged access to S3 buckets.
-     See https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html
-     */
-    func sign(_ headers: HTTPHeaders) throws -> String {
+
+    /// Creates the string for the Signature field of the Authorization header required for privileged access to S3 buckets.
+    /// See: https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html
+    func sign(resource: String, in bucket: Bucket, headers: HTTPHeaders) throws -> String {
+        var allowedChars = CharacterSet.urlPathAllowed
+        allowedChars.remove(":")
+
+        let canonicalURI = "/\(bucket.name)/\(resource)".addingPercentEncoding(withAllowedCharacters: allowedChars)!
         var canonicalRequest = """
         PUT
-        /test.txt
+        \(canonicalURI)
 
 
         """
@@ -95,26 +140,30 @@ class S3FileManager {
         let stringToSign = """
         AWS4-HMAC-SHA256
         \(headers.amzTimestamp)
-        \(headers.amzYMD)/\(region)/\(service)/aws4_request
+        \(headers.amzYMD)/\(bucket.region)/s3/aws4_request
         \(canonicalRequest.data(using: .utf8)!.sha256().toHexString())
         """
 
-        let dateKey = try HMAC(key: "AWS4\(awsSecretAccessKey)", variant: .sha256).authenticate(headers.amzYMD.bytes)
-        let dateRegionKey = try HMAC(key: dateKey, variant: .sha256).authenticate(region.bytes)
-        let dateRegionServiceKey = try HMAC(key: dateRegionKey, variant: .sha256).authenticate(service.bytes)
+        let dateKey = try HMAC(key: "AWS4\(credentials.secret)", variant: .sha256).authenticate(headers.amzYMD.bytes)
+        let dateRegionKey = try HMAC(key: dateKey, variant: .sha256).authenticate(bucket.region.bytes)
+        let dateRegionServiceKey = try HMAC(key: dateRegionKey, variant: .sha256).authenticate("s3".bytes)
         let signingKey = try HMAC(key: dateRegionServiceKey, variant: .sha256).authenticate("aws4_request".bytes)
 
         return try HMAC(key: signingKey, variant: .sha256).authenticate(stringToSign.bytes).toHexString()
-        
+
     }
-    
-    /// Formats dates as ISO 8601 strings, for use with Amazon S3.
-    private static var amazonDateFormatter: ISO8601DateFormatter = {
-        let formatter = ISO8601DateFormatter()
-        formatter.formatOptions.remove(.withColonSeparatorInTime)
-        formatter.formatOptions.remove(.withDashSeparatorInDate)
-        return formatter
-    }()
+
+}
+
+private extension S3FileManager.Bucket {
+
+    var host: String {
+        var host = "s3"
+        if region != "us-east-1" {
+            host += "-\(region)"
+        }
+        return "\(host).amazonaws.com"
+    }
 
 }
 

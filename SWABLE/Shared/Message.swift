@@ -17,7 +17,7 @@
 struct Message: CustomStringConvertible {
 
     public static let notificationName = Notification.Name(rawValue: "com.raizlabs.swable.message")
-    public static let objectKey = "com.raizlabs.swable.messageObject"
+    public static let objectKey = "com.raizlabs.swable.message"
     
     var text: String
     var date: Date
@@ -47,17 +47,15 @@ struct Message: CustomStringConvertible {
     var attributedDescription: NSAttributedString {
         let formattedDate = Message.dateFormatter.string(from: self.date)
         
-        let desc = self.description
-        
+        let desc = description
         let attributedText = NSMutableAttributedString(string: desc, attributes: [
             .font: Font.systemFont(ofSize: 12)
-            ])
-        attributedText.addAttributes([
-            //.font: Font.boldSystemFont(ofSize: 12)
-            .font: Font.monospacedDigitSystemFont(ofSize: 12, weight: .bold)
-            ], range: (desc as NSString).range(of: formattedDate))
+        ])
 
-        
+        attributedText.addAttributes([
+            .font: Font.monospacedDigitSystemFont(ofSize: 12, weight: .bold)
+        ], range: (desc as NSString).range(of: formattedDate))
+
         return attributedText
     }
 
@@ -78,9 +76,17 @@ struct Message: CustomStringConvertible {
             text += ": \(messageText)"
         }
         
-        let message = Message(text: messageText, date: date, file: fileName, line: line, function: function)
+        let message = Message(
+            text: messageText,
+            date: date,
+            file: fileName,
+            line: line,
+            function: function
+        )
         
-        NotificationCenter.default.post(name: Message.notificationName, object: nil, userInfo: [ Message.objectKey: message ])
+        NotificationCenter.default.post(name: Message.notificationName, object: nil, userInfo: [
+            Message.objectKey: message,
+        ])
     }
     
     

@@ -19,7 +19,7 @@ import Anchorage
 final class LogViewController: ViewController {
 
     private let textView = TextView(frame: CGRect(x: 0, y: 0, width: 800, height: 500))
-    let log = MessageLog()
+    private let log = Log()
 
     override func loadView() {
         #if os(OSX)
@@ -46,8 +46,6 @@ final class LogViewController: ViewController {
         textView.isEditable = false
 
         NotificationCenter.default.addObserver(self, selector: #selector(onReceiveMessage), name: Message.notificationName, object: nil)
-        
-        log.upload()
     }
 
     @IBAction func clear(_ sender: Any) {
@@ -56,6 +54,10 @@ final class LogViewController: ViewController {
         #else
             textView.attributedText = nil
         #endif
+    }
+
+    @IBAction func uploadLog(_ sender: Any) {
+        log.upload()
     }
 
     @objc private func onReceiveMessage(notification: Notification) {
