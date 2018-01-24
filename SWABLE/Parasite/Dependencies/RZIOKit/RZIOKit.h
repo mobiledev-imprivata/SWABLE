@@ -22,6 +22,7 @@ typedef rz_io_object_t rz_io_service_t;
 
 CF_EXPORT mach_port_t kRZIOMasterPortDefault;
 
+CF_EXPORT RZIOReturn RZIOObjectGetClass(rz_io_object_t object, char *name);
 CF_EXPORT boolean_t RZIOObjectIsEqualTo(rz_io_object_t object, rz_io_object_t anObject);
 
 CF_EXPORT CFDictionaryRef RZIOServiceMatching(const char *name);
@@ -43,5 +44,7 @@ CF_EXPORT RZIOReturn RZIOObjectRelease(rz_io_service_t object);
 
 CF_EXPORT RZIOReturn RZIOPMCopyCPUPowerStatus(CFDictionaryRef *cpuPowerStatus);
 CF_EXPORT RZIOReturn RZIOPMGetThermalWarningLevel(uint32_t *thermalLevel);
+
+CF_EXPORT void RZIOPrintServices(void);
 
 #endif

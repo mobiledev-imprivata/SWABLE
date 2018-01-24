@@ -23,7 +23,9 @@ class SystemInfoTextView: UITextView {
         return bt
     }()
     
-    public func update() {
+    func update() {
+        isEditable = false
+
         var textChunks: [String] = []
         
         // Add CPU usage info
@@ -31,9 +33,9 @@ class SystemInfoTextView: UITextView {
         let counts = System.processCounts()
         
         textChunks.append("""
-            ┏━━━━━━━━━━━━━━━━━━━┓
+            -------------------
             CPU
-            ┗━━━━━━━━━━━━━━━━━━━┛
+            -------------------
             
             Thermal State: \(getThermalStateString())
             
@@ -50,9 +52,9 @@ class SystemInfoTextView: UITextView {
         let memoryUsage = System.memoryUsage()
         
         textChunks.append("""
-            ┏━━━━━━━━━━━━━━━━━━━┓
+            -------------------
             Memory
-            ┗━━━━━━━━━━━━━━━━━━━┛
+            -------------------
             
             RAM Total: \(memoryUnit(System.physicalMemory()))
             RAM Free: \(memoryUnit(memoryUsage.free))
@@ -62,17 +64,17 @@ class SystemInfoTextView: UITextView {
         // Add battery info
         if let battery = battery {
             textChunks.append("""
-            ┏━━━━━━━━━━━━━━━━━━━┓
+            -------------------
             Battery
-            ┗━━━━━━━━━━━━━━━━━━━┛
+            -------------------
             Charge: \(battery.charge())%
             \(battery.isACPowered() ? "Plugged in" : "Not plugged in") \(battery.isCharging() ? "(and charging)" : "")
             """)
         } else {
             textChunks.append("""
-            ┏━━━━━━━━━━━━━━━━━━━┓
+            -------------------
             Battery
-            ┗━━━━━━━━━━━━━━━━━━━┛
+            -------------------
 
             Not available!
             """)
