@@ -73,6 +73,11 @@
                                     <action selector="clear:" target="-1" id="QWn-dy-hhm"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Upload Log" keyEquivalent="u" id="Itw-to-RqV">
+                                <connections>
+                                    <action selector="uploadLog:" target="-1" id="bBd-ai-e9p"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
