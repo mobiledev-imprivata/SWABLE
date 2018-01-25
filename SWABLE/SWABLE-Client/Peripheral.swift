@@ -9,7 +9,7 @@
 import CoreBluetooth
 
 protocol PeripheralDelegate: class {
-    func peripheralDidStartAdvertsising(_ peripheral: Peripheral)
+    func peripheralDidStartAdvertising(_ peripheral: Peripheral)
     func peripheralDidStopAdvertising(_ peripheral: Peripheral)
 }
 
@@ -17,7 +17,7 @@ final class Peripheral: NSObject {
 
     weak var delegate: PeripheralDelegate?
 
-    private let service: CBMutableService = {
+    private var service: CBMutableService = {
         let service = CBMutableService(
             type: CBUUID(string: Constants.Peripheral.service),
             primary: true
@@ -32,6 +32,7 @@ final class Peripheral: NSObject {
         ]
         return service
     }()
+    private var servicesInitialized = false
 
     private var peripheralManager: CBPeripheralManager?
 
@@ -42,7 +43,9 @@ final class Peripheral: NSObject {
             return
         }
 
-        peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [
+            CBPeripheralManagerOptionRestoreIdentifierKey: Constants.Peripheral.identifier,
+        ])
     }
 
     func stopAdvertising() {
@@ -62,28 +65,51 @@ final class Peripheral: NSObject {
 
 extension Peripheral: CBPeripheralManagerDelegate {
 
+    func peripheralManager(_ peripheral: CBPeripheralManager, willRestoreState dict: [String : Any]) {
+        Message.post(dict)
+
+        if let service = (dict[CBPeripheralManagerRestoredStateServicesKey] as? [CBMutableService])?.first {
+            self.service = service
+            servicesInitialized = true
+        }
+    }
+
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         Message.post(peripheral.state)
 
         if peripheral.state == .poweredOn {
-            peripheral.removeAllServices()
-            peripheral.add(service)
+            if servicesInitialized {
+                if peripheral.isAdvertising {
+                    delegate?.peripheralDidStartAdvertising(self)
+                }
+                else {
+                    peripheral.startAdvertising([
+                        CBAdvertisementDataServiceUUIDsKey: [service.uuid]
+                    ])
+                }
+            }
+            else {
+                peripheral.removeAllServices()
+                peripheral.add(service)
+            }
+        }
+        else if peripheral.state == .poweredOff {
+            stopAdvertising()
         }
     }
 
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
         Message.post(service, error ?? "")
 
-        if error == nil {
-            peripheral.startAdvertising([
-                CBAdvertisementDataServiceUUIDsKey: [service.uuid]
-            ])
-        }
+        servicesInitialized = true
+
+        peripheral.startAdvertising([
+            CBAdvertisementDataServiceUUIDsKey: [service.uuid]
+        ])
     }
 
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
-        Message.post(error ?? "")
-        delegate?.peripheralDidStopAdvertising(self)
+        delegate?.peripheralDidStartAdvertising(self)
     }
 
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveRead request: CBATTRequest) {

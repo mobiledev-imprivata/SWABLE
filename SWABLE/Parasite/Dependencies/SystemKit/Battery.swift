@@ -115,7 +115,7 @@ public struct Battery {
         
         
         // TODO: Could there be more than one service? serveral batteries?
-        let serviceName = RZIOServiceNameMatching(Battery.IOSERVICE_BATTERY).takeUnretainedValue()
+        let serviceName = RZIOServiceMatching(Battery.IOSERVICE_BATTERY).takeUnretainedValue()
         service = RZIOServiceGetMatchingService(kRZIOMasterPortDefault,
                                                 serviceName) //TODO: Test
         

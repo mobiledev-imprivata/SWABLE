@@ -29,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func launch(options: [UIApplicationLaunchOptionsKey: Any]?) {
         Message.post(options ?? [:])
 
+        peripheral.delegate = self
+        peripheral.startAdvertising()
+
         beaconMonitor.delegate = self
         beaconMonitor.start()
     }
@@ -39,7 +42,6 @@ extension AppDelegate: BeaconMonitorDelegate {
 
     func beaconMonitorDidStart(_ beaconMonitor: BeaconMonitor) {
         Message.post()
-        peripheral.startAdvertising()
     }
 
     func beaconMonitorDidStop(_ beaconMonitor: BeaconMonitor) {
@@ -50,7 +52,7 @@ extension AppDelegate: BeaconMonitorDelegate {
 
 extension AppDelegate: PeripheralDelegate {
 
-    func peripheralDidStartAdvertsising(_ peripheral: Peripheral) {
+    func peripheralDidStartAdvertising(_ peripheral: Peripheral) {
         Message.post()
     }
 

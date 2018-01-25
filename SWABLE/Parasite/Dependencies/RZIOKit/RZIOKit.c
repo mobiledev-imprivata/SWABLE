@@ -11,6 +11,7 @@
 
 mach_port_t kRZIOMasterPortDefault;
 
+RZIOReturn (*_RZIOObjectGetClass)(rz_io_object_t object, char *name);
 boolean_t (*_RZIOObjectIsEqualTo)(rz_io_object_t object, rz_io_object_t anObject);
 
 CFDictionaryRef (*_RZIOServiceMatching)(const char *name);
@@ -36,13 +37,14 @@ RZIOReturn (*_RZIOPMGetThermalWarningLevel)(uint32_t *thermalLevel);
 
 const char *kRZIOKitFrameworkPath = "/System/Library/PrivateFrameworks/IOKit.framework/IOKit";
 
-void ut_prepareIOKitSymbols() __attribute__((constructor));
-void ut_prepareIOKitSymbols()
+void ut_prepareIOKitSymbols(void) __attribute__((constructor));
+void ut_prepareIOKitSymbols(void)
 {
     void *iokit_handle = dlopen(kRZIOKitFrameworkPath, RTLD_LAZY);
 
     void *masterPort = dlsym(iokit_handle, "kIOMasterPortDefault");
     kRZIOMasterPortDefault = masterPort != NULL ? *(mach_port_t *)(masterPort) : 0;
+    _RZIOObjectGetClass = dlsym(iokit_handle, "IOObjectGetClass");
     _RZIOObjectIsEqualTo = dlsym(iokit_handle, "IOObjectIsEqualTo");
     _RZIOServiceMatching = dlsym(iokit_handle, "IOServiceMatching");
     _RZIOServiceNameMatching = dlsym(iokit_handle, "IOServiceNameMatching");
@@ -60,6 +62,11 @@ void ut_prepareIOKitSymbols()
 }
 
 #pragma mark - public methods
+
+RZIOReturn RZIOObjectGetClass(rz_io_object_t object, char *name)
+{
+    return _RZIOObjectGetClass(object, name);
+}
 
 boolean_t RZIOObjectIsEqualTo(rz_io_object_t object, rz_io_object_t anObject)
 {
@@ -132,4 +139,23 @@ RZIOReturn RZIOPMGetThermalWarningLevel(uint32_t *thermalLevel)
     return _RZIOPMGetThermalWarningLevel(thermalLevel);
 }
 
+void RZIOPrintServices() {
+    CFDictionaryRef matcher = RZIOServiceMatching("IOService");
 
+    rz_io_iterator_t iterator = 0;
+    RZIOServiceGetMatchingServices(kRZIOMasterPortDefault, matcher, &iterator);
+
+    rz_io_object_t service = RZIOIteratorNext(iterator);
+
+    while ( service != 0 ) {
+        char name[256];
+        RZIORegistryEntryGetName(service, name);
+
+        printf("%s\n", name);
+
+        RZIOObjectRelease(service);
+        service = RZIOIteratorNext(iterator);
+    }
+
+    RZIOObjectRelease(iterator);
+}

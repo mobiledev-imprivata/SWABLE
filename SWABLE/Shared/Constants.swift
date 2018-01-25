@@ -22,6 +22,7 @@ struct Constants {
 
     struct Peripheral {
 
+        static let identifier = "com.raizlabs.swable-client"
         static let service = "3025E7A9-CC24-4B7C-B806-0F674D07E46C"
         static let characteristic = "9476292B-5E5A-4CD4-BD3E-9B1E7B4DB12E"
         static let characteristicData = "👋".data(using: .utf8)
