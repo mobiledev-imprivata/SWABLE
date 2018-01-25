@@ -22,8 +22,9 @@ final class PeripheralScanner: NSObject {
 
     weak var delegate: PeripheralScannerDelegate?
 
-    private let scanWindow: TimeInterval = 2
+    private let scanWindow: TimeInterval = 3
     private let keepAliveInterval: TimeInterval = 10
+    private let minRSSI = -55
     private let serviceUUID = CBUUID(string: Constants.Peripheral.service)
 
     private var centralManager: CBCentralManager!
@@ -99,8 +100,8 @@ extension PeripheralScanner: CBCentralManagerDelegate {
         }
 
         // Only consider devices above a certain signal threshold
-        // NOTE: This matches Imprivata OneSign agent according to Paul
-        guard RSSI.intValue > -85 else {
+        // NOTE: This value is deliberately very strict for ease of testing
+        guard RSSI.intValue > minRSSI else {
             return
         }
 
