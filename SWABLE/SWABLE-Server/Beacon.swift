@@ -50,7 +50,7 @@ final class Beacon: NSObject {
         var proximityUUID: UUID
         var major: CLBeaconMajorValue
         var minor: CLBeaconMinorValue
-        var power: Int8
+        var rssiAt1m: Int8
 
         // Mimics the beacon advertising packet sent by iOS devices
         // Adapted from https://stackoverflow.com/questions/19410398/turn-macbook-into-ibeacon
@@ -65,7 +65,7 @@ final class Beacon: NSObject {
             buffer[18] = UInt8(bitPattern: Int8(minor >> 8))
             buffer[19] = UInt8(bitPattern: Int8(minor & 255))
 
-            buffer[20] = UInt8(bitPattern: power)
+            buffer[20] = UInt8(bitPattern: rssiAt1m)
 
             return [
                 "kCBAdvDataAppleBeaconKey": NSData(bytes: &buffer, length: buffer.count)
@@ -87,7 +87,7 @@ extension Beacon: CBPeripheralManagerDelegate {
                     proximityUUID: Constants.Beacon.proximityUUID,
                     major: Constants.Beacon.major,
                     minor: Constants.Beacon.minor,
-                    power: Constants.Beacon.transmissionPower
+                    rssiAt1m: Constants.Beacon.rssiAt1m
                 ).toDict()
             )
         }

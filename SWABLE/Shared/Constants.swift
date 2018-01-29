@@ -16,7 +16,7 @@ struct Constants {
         static let major: UInt16 = 0x01
         static let minor: UInt16 = 0x03
         static let identifier = "com.raizlabs.swable-server"
-        static let transmissionPower: Int8 = -56
+        static let rssiAt1m: Int8 = -56
 
     }
 

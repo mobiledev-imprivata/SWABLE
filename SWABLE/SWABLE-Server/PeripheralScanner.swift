@@ -24,7 +24,7 @@ final class PeripheralScanner: NSObject {
 
     private let scanWindow: TimeInterval = 3
     private let keepAliveInterval: TimeInterval = 10
-    private let minRSSI = -55
+    private let minRSSI = -60
     private let serviceUUID = CBUUID(string: Constants.Peripheral.service)
 
     private var centralManager: CBCentralManager!
